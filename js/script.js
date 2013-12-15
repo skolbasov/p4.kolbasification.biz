@@ -65,12 +65,12 @@ $('#notUrgent').click(function(){
 
 $('#important').focusin(function()
 {
-	$('#hintDiv').html("Tasks you must <b>plan</b> or they`ll become urgent.");
+	$('#hintDiv').html("Important: Tasks you must <b>plan</b> or they`ll become urgent.");
 });
 
-$('#notImportant').focusin(function()
+$('#unimportant').focusin(function()
 {
-	$('#hintDiv').html("Tasks <b>to be eliminated</b> or they`ll become urgent.");
+	$('#hintDiv').html("Unimportant: Tasks <b>to be eliminated</b> or they`ll become urgent.");
 });
 
 $("input:radio").focusout(function()
@@ -108,9 +108,9 @@ $('#daySchedule').html('');
 sort(events);
 
 $('#urgentimportant').html('');
-$('#urgentnotImportant').html('');
+$('#urgentunimportant').html('');
 $('#notUrgentimportant').html('');
-$('#notUrgentnotImportant').html('');
+$('#notUrgentunimportant').html('');
 for (x in events)
 {
 	$('#daySchedule').append("<div id='event"+x+"' class='line "+events[x].eventUrgency+events[x].eventImportance+"'>Event date: "+events[x].eventDate+"<br> Event time "+events[x].eventStartTime+"-"+events[x].eventEndTime+"<br> Event name: "+events[x].eventName+"<br>"+events[x].eventDescription+"</div>");
@@ -121,7 +121,7 @@ for (x in events)
 		{
 		$('#urgentimportant').append(events[x].makeDiv());
 		} 
-	else $('#urgentnotImportant').append(events[x].makeDiv());
+	else $('#urgentunimportant').append(events[x].makeDiv());
 	} 
 	else 
 	{
@@ -129,7 +129,7 @@ for (x in events)
 		{
 		$('#notUrgentimportant').append(events[x].makeDiv());
 		}
-		 else $('#notUrgentnotImportant').append(events[x].makeDiv());
+		 else $('#notUrgentunimportant').append(events[x].makeDiv());
 	}
 }
 $('#errorDiv').html('');	
@@ -173,6 +173,94 @@ $('#printQuadrant').click(function()
     		
 });
 
+var clientId = '704443940021-nssh124np9slcmfpi64o4gicksceaqta.apps.googleusercontent.com';
+
+      var apiKey = 'AIzaSyCgyw5Ror4wA8MB4qjqtbRqcJcPbZ5PuEg';
+
+      var scopes = 'https://www.googleapis.com/auth/calendar';
+      // Use a button to handle authentication the first time.
+      function handleClientLoad() {
+        gapi.client.setApiKey(apiKey);
+        window.setTimeout(checkAuth,1);
+      }
+
+      function checkAuth() {
+        gapi.auth.authorize({client_id: clientId, scope: scopes, immediate: true}, handleAuthResult);
+      }
+
+
+      function handleAuthResult(authResult) {
+        var authorizeButton = document.getElementById('authorize-button');
+        if (authResult && !authResult.error) {
+          authorizeButton.style.visibility = 'hidden';
+          makeApiCall();
+        } else {
+          authorizeButton.style.visibility = '';
+          authorizeButton.onclick = handleAuthClick;
+        }
+      }
+
+      function handleAuthClick(event) {
+        gapi.auth.authorize({client_id: clientId, scope: scopes, immediate: false}, handleAuthResult);
+        return false;
+      }
+
+      // Load the API and make an API call.  Display the results on the screen.
+      function makeApiCall() {
+
+ /* gapi.client.load('calendar', 'v3', function() {
+    var request = gapi.client.calendar.events.list({
+      'calendarId': 'primary'
+    });
+          
+    request.execute(function(resp) {
+      for (var i = 0; i < resp.items.length; i++) {
+        var li = document.createElement('li');
+        li.appendChild(document.createTextNode(resp.items[i].summary));
+        document.getElementById('events').appendChild(li);
+      }
+    });
+  });
+}*/
+}
+$('#pushButton').click(function(){
+
+
+gapi.client.load('calendar', 'v3', function() {
+console.log($("#eventDate").val());
+console.log($("#eventStartTime").val());
+    var resource = {
+  "summary": $("#eventName").val(),
+  "location": "Somewhere",
+  "start": {
+    "dateTime": $("#eventDate").val()+"T10:30:00.000-07:00"
+  },
+  "end": {
+    "dateTime": $("#eventDate").val()+"T10:55:00.000-07:00"
+  }
+};
+
+
+var request = gapi.client.calendar.events.insert({
+  'calendarId': 'primary',
+  'resource': resource
+});
+request.execute(function(resp) {
+  console.log(resp);
+});
+})
+  alert("Submit clicked");
+      });
+
+
+
+$.getScript( "https://apis.google.com/js/client.js?onload=handleClientLoad" )
+  .done(function( script, textStatus ) {
+    console.log( textStatus );
+  })
+  .fail(function( jqxhr, settings, exception ) {
+    $( "div.log" ).text( "Triggered ajaxError handler." );
+});
 
 
 

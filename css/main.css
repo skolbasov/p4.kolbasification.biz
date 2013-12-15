@@ -92,7 +92,7 @@ text-align:left;
         
           background-color: green;
           }
-.urgentnotImportant{
+.urgentunimportant{
 
   background-color: blue;
 
@@ -103,7 +103,7 @@ text-align:left;
   background-color: orange;
 
 }
-.notUrgentnotImportant{
+.notUrgentunimportant{
 
   background-color: red;
 
