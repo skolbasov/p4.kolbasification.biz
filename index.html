@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+
+   <meta charset='utf-8' />
+<title>Time management tool</title>
+	<link rel="stylesheet" href="css/main.css" type="text/css">
+</head>
+<body>
+
+  <header>
+    <h1>Eisenhower`s method of time management</h1>
+  </header>
+
+<div id="wrapper" class="wrapper">
+  <div id="inputForm" class="column">
+    <label for='eventName'>Enter the event name</label>
+    <input type="text" class="text-field"  id="eventName" maxlength="240" >
+    
+    <div id="urgencyImportanceSelector">Choose the event parameters:
+    <br><input type="radio" name="urgencySelector" class="text-field" value="urgent" id="urgent">Urgent
+    <input type="radio" name="urgencySelector" class="text-field" value="notUrgent" id="notUrgent">Not urgent
+    </div>
+    <br><input type="radio" name="importanceSelector" class="text-field" value="important" id="important">Important
+    <input type="radio" name="importanceSelector" class="text-field" value="notImportant" id="notImportant">Not important
+
+    <br><label for='eventDate' class='canBeHidden'>Enter the event date</label>
+    <input type="date" class="text-field canBeHidden" >
+    
+    <br><label for='eventStartTime'>Enter the event start time</label>
+    <input type="time" class="text-field"  id="eventStartTime" >
+        
+    <br><label for='eventEndTime'>Enter the event end time</label>
+    <input type="time" class="text-field"  id="eventEndTime" >
+          
+    <br><label for='eventDescription'>Enter the event description:</label><br>
+    <textarea class="text-field" id="eventDescription"></textarea>
+    
+
+
+    <br><button id="submitButton" class="btn">Add to the tasks list</button>
+    
+    <div id="errorDiv"></div>
+    <div id="hintDiv"></div>
+  </div>
+
+<div id="scheduleWrapper" class="column">
+  <div id="daySchedule"></div>
+  <button id="printSchedule" class="btn">Print the schedule</button>
+</div>
+
+<div id='eisenhowerWrapper' class="column">
+  <div id='eisenhowerQuadrant'>
+    <div id='urgentimportant' class="box urgentimportant"></div>
+    <div id='urgentnotImportant' class="box urgentnotImportant"></div>
+    <div id='notUrgentimportant' class="box notUrgentimportant"></div>
+    <div id='notUrgentnotImportant' class="box notUrgentnotImportant"></div>
+  </div>
+<button id="printQuadrant" class="btn">Print the quadrant</button>
+</div>
+
+</div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/js/script.js"></script>
+
+</body>
+</html>
