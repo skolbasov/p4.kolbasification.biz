@@ -1,9 +1,8 @@
 var events =[];
    
-function Event(eventName,eventDate,eventStartTime,eventEndTime,eventDescription,eventUrgency,eventImportance)
+function Event(eventName,eventStartTime,eventEndTime,eventDescription,eventUrgency,eventImportance)
 {
 this.eventName=eventName;
-this.eventDate=eventDate;
 this.eventStartTime=eventStartTime;
 this.eventEndTime=eventEndTime;
 this.eventDescription=eventDescription;
@@ -14,7 +13,7 @@ this.makeDiv=makeDiv;
 
 function makeDiv()
 {
-return "<div class='"+this.eventUrgency+this.eventImportance+"'>Event date: "+this.eventDate+"<br> Event time "+this.eventStartTime+"-"+this.eventEndTime+"<br> Event name: "+this.eventName+"<br>"+this.eventDescription+"</div>";
+return "<div class='"+this.eventUrgency+this.eventImportance+"'><br> Event time "+this.eventStartTime+"-"+this.eventEndTime+"<br> Event name: "+this.eventName+"<br>"+this.eventDescription+"</div>";
 }
 
 }
@@ -88,7 +87,7 @@ $("#eventDate").focusout(function()
 
 $("#eventEndTime").focusout(function()
 {
-
+	console.log($("#eventEndTime").val());
 	if ($("#eventEndTime").val()<$("#eventStartTime").val()) {$("#errorDiv").html("End time should be after start time") }else $("#errorDiv").html("");
 });
 
@@ -233,10 +232,10 @@ console.log($("#eventStartTime").val());
   "summary": $("#eventName").val(),
   "location": "Somewhere",
   "start": {
-    "dateTime": $("#eventDate").val()+"T10:30:00.000-07:00"
+    "dateTime": $("#eventStartTime").val()+":00.000-07:00"
   },
   "end": {
-    "dateTime": $("#eventDate").val()+"T10:55:00.000-07:00"
+    "dateTime": $("#eventEndTime").val()+":00.000-07:00"
   }
 };
 
