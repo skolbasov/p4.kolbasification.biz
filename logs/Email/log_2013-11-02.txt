@@ -1,0 +1,72 @@
+2013-11-02 7:15:18 - INFO --> -------------------------- 
+2013-11-02 7:15:18 - INFO --> Controller/Method: users/p_signup 
+2013-11-02 7:15:18 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY skolbasov@gmail.com 
+2013-11-02 7:15:18 - INFO --> From: SBlog (SBlog@p2.kolbasification.biz) 
+2013-11-02 7:15:18 - INFO --> To: ss  (skolbasov@yandex.ru),  
+2013-11-02 7:15:18 - INFO --> CC:  
+2013-11-02 7:15:18 - INFO --> BCC:  
+2013-11-02 7:15:18 - INFO --> Subject: Confirmation letter 
+2013-11-02 7:15:18 - INFO --> Body: Dear ss  this is the confirmation letter of your registration to Sblog. To activate your account please visit the <a href='http://localhost/users/p_activate/e17492532143e4d7bb3c1a3bc952099bf859e4fc'>activation link</a> 
+2013-11-02 7:15:23 - INFO --> -------------------------- 
+2013-11-02 7:15:23 - INFO --> Controller/Method: users/p_signup 
+2013-11-02 7:15:23 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY skolbasov@gmail.com 
+2013-11-02 7:15:23 - INFO --> From: SBlog (SBlog@p2.kolbasification.biz) 
+2013-11-02 7:15:23 - INFO --> To: ss  (skolbasov@yandex.ru),  
+2013-11-02 7:15:23 - INFO --> CC:  
+2013-11-02 7:15:23 - INFO --> BCC:  
+2013-11-02 7:15:23 - INFO --> Subject: Confirmation letter 
+2013-11-02 7:15:23 - INFO --> Body: Dear ss  this is the confirmation letter of your registration to Sblog. To activate your account please visit the <a href='http://localhost/users/p_activate/5c8c095b39fc1be4323492e294b73de14f7195ab'>activation link</a> 
+2013-11-02 8:34:55 - INFO --> -------------------------- 
+2013-11-02 8:34:55 - INFO --> Controller/Method: users/p_signup 
+2013-11-02 8:34:55 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY skolbasov@gmail.com 
+2013-11-02 8:34:55 - INFO --> From: SBlog (SBlog@p2.kolbasification.biz) 
+2013-11-02 8:34:55 - INFO --> To: asd  (skolbasov@yandex.ru),  
+2013-11-02 8:34:55 - INFO --> CC:  
+2013-11-02 8:34:55 - INFO --> BCC:  
+2013-11-02 8:34:55 - INFO --> Subject: Confirmation letter 
+2013-11-02 8:34:55 - INFO --> Body: Dear asd  this is the confirmation letter of your registration to Sblog. To activate your account please follow the <a href='http://localhost/users/p_activate/27940eb5fec1932a1e3bc2df59718b3c3594449b'>activation link</a> 
+2013-11-02 8:48:56 - INFO --> -------------------------- 
+2013-11-02 8:48:56 - INFO --> Controller/Method: users/p_signup 
+2013-11-02 8:48:56 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY skolbasov@gmail.com 
+2013-11-02 8:48:56 - INFO --> From: SBlog (SBlog@p2.kolbasification.biz) 
+2013-11-02 8:48:56 - INFO --> To: sd  (sdldkfj),  
+2013-11-02 8:48:56 - INFO --> CC:  
+2013-11-02 8:48:56 - INFO --> BCC:  
+2013-11-02 8:48:56 - INFO --> Subject: Confirmation letter 
+2013-11-02 8:48:56 - INFO --> Body: Dear sd  this is the confirmation letter of your registration to Sblog. To activate your account please follow the <a href='http://localhost/users/p_activate/75e25cdbb1fc857bb3944fe04e3c9a9241991323'>activation link</a> 
+2013-11-02 9:13:28 - INFO --> -------------------------- 
+2013-11-02 9:13:28 - INFO --> Controller/Method: users/p_signup 
+2013-11-02 9:13:28 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY skolbasov@gmail.com 
+2013-11-02 9:13:28 - INFO --> From: SBlog (SBlog@p2.kolbasification.biz) 
+2013-11-02 9:13:28 - INFO --> To: ss  (ss@dd.dd),  
+2013-11-02 9:13:28 - INFO --> CC:  
+2013-11-02 9:13:28 - INFO --> BCC:  
+2013-11-02 9:13:28 - INFO --> Subject: Confirmation letter 
+2013-11-02 9:13:28 - INFO --> Body: Dear ss  this is the confirmation letter of your registration to Sblog. To activate your account please follow the <a href='http://localhost/users/p_activate/77c2157e4b26879b072e981a9a666b7233431e03'>activation link</a> 
+2013-11-02 9:15:59 - INFO --> -------------------------- 
+2013-11-02 9:15:59 - INFO --> Controller/Method: users/p_signup 
+2013-11-02 9:15:59 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY skolbasov@gmail.com 
+2013-11-02 9:15:59 - INFO --> From: SBlog (SBlog@p2.kolbasification.biz) 
+2013-11-02 9:15:59 - INFO --> To: ss  (skolbasov@yandex.ru),  
+2013-11-02 9:15:59 - INFO --> CC:  
+2013-11-02 9:15:59 - INFO --> BCC:  
+2013-11-02 9:15:59 - INFO --> Subject: Confirmation letter 
+2013-11-02 9:15:59 - INFO --> Body: Dear ss  this is the confirmation letter of your registration to Sblog. To activate your account please follow the <a href='http://localhost/users/p_activate/44d49283d726191cdd0ee577a3bd7fe64f11d1c5'>activation link</a> 
+2013-11-02 9:28:57 - INFO --> -------------------------- 
+2013-11-02 9:28:57 - INFO --> Controller/Method: users/p_signup 
+2013-11-02 9:28:57 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY skolbasov@gmail.com 
+2013-11-02 9:28:57 - INFO --> From: SBlog (SBlog@p2.kolbasification.biz) 
+2013-11-02 9:28:57 - INFO --> To: 11 22 (skolbasov@gmail.com),  
+2013-11-02 9:28:57 - INFO --> CC:  
+2013-11-02 9:28:57 - INFO --> BCC:  
+2013-11-02 9:28:57 - INFO --> Subject: Confirmation letter 
+2013-11-02 9:28:57 - INFO --> Body: Dear 11 22 this is the confirmation letter of your registration to Sblog. To activate your account please follow the <a href='http://localhost/users/p_activate/741bee18c45d30fd9e6ad42764d75f2c9d3d1117'>activation link</a> 
+2013-11-02 10:15:53 - INFO --> -------------------------- 
+2013-11-02 10:15:53 - INFO --> Controller/Method: users/p_signup 
+2013-11-02 10:15:53 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY skolbasov@gmail.com 
+2013-11-02 10:15:53 - INFO --> From: SBlog (SBlog@p2.kolbasification.biz) 
+2013-11-02 10:15:53 - INFO --> To: asd asfdf (sss@sasf.jj),  
+2013-11-02 10:15:53 - INFO --> CC:  
+2013-11-02 10:15:53 - INFO --> BCC:  
+2013-11-02 10:15:53 - INFO --> Subject: Confirmation letter 
+2013-11-02 10:15:53 - INFO --> Body: Dear asd asfdf this is the confirmation letter of your registration to Sblog. To activate your account please follow the <a href='http://localhost/users/p_activate/7ebda4430f5827e95375d2d87c5dfe88b1a4e1d0'>activation link</a> 

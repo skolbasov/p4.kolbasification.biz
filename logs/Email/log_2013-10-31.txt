@@ -1,0 +1,163 @@
+2013-10-31 14:22:52 - INFO --> -------------------------- 
+2013-10-31 14:22:52 - INFO --> Controller/Method: users/p_signup 
+2013-10-31 14:22:52 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY skolbasov@gmail.com 
+2013-10-31 14:22:52 - INFO --> From: SBlog (SBlog@p2.kolbasification.biz) 
+2013-10-31 14:22:52 - INFO --> To: Sergey Kolbasss (skolbasov@yandex.ru),  
+2013-10-31 14:22:52 - INFO --> CC:  
+2013-10-31 14:22:52 - INFO --> BCC:  
+2013-10-31 14:22:52 - INFO --> Subject:  
+2013-10-31 14:22:52 - INFO --> Body: Dear  this is the confirmation letter of your registration to Sblog 
+2013-10-31 14:26:24 - INFO --> -------------------------- 
+2013-10-31 14:26:24 - INFO --> Controller/Method: users/p_signup 
+2013-10-31 14:26:24 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY skolbasov@gmail.com 
+2013-10-31 14:26:24 - INFO --> From: SBlog (SBlog@p2.kolbasification.biz) 
+2013-10-31 14:26:24 - INFO --> To: ddd gggg (skolbasov@yandex.ru),  
+2013-10-31 14:26:24 - INFO --> CC:  
+2013-10-31 14:26:24 - INFO --> BCC:  
+2013-10-31 14:26:24 - INFO --> Subject: Confirmation letter 
+2013-10-31 14:26:24 - INFO --> Body: Dear  this is the confirmation letter of your registration to Sblog 
+2013-10-31 14:27:57 - INFO --> -------------------------- 
+2013-10-31 14:27:57 - INFO --> Controller/Method: users/p_signup 
+2013-10-31 14:27:57 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY skolbasov@gmail.com 
+2013-10-31 14:27:57 - INFO --> From: SBlog (SBlog@p2.kolbasification.biz) 
+2013-10-31 14:27:57 - INFO --> To: fd sdf (),  
+2013-10-31 14:27:57 - INFO --> CC:  
+2013-10-31 14:27:57 - INFO --> BCC:  
+2013-10-31 14:27:57 - INFO --> Subject: Confirmation letter 
+2013-10-31 14:27:57 - INFO --> Body: Dear  this is the confirmation letter of your registration to Sblog 
+2013-10-31 14:36:15 - INFO --> -------------------------- 
+2013-10-31 14:36:15 - INFO --> Controller/Method: users/p_signup 
+2013-10-31 14:36:15 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY skolbasov@gmail.com 
+2013-10-31 14:36:15 - INFO --> From:  () 
+2013-10-31 14:36:15 - INFO --> To: S (S), S (S),  
+2013-10-31 14:36:15 - INFO --> CC:  
+2013-10-31 14:36:15 - INFO --> BCC:  
+2013-10-31 14:36:15 - INFO --> Subject: Confirmation letter 
+2013-10-31 14:36:15 - INFO --> Body: Dear  this is the confirmation letter of your registration to Sblog 
+2013-10-31 14:38:45 - INFO --> -------------------------- 
+2013-10-31 14:38:45 - INFO --> Controller/Method: users/p_signup 
+2013-10-31 14:38:45 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY skolbasov@gmail.com 
+2013-10-31 14:38:45 - INFO --> From:  () 
+2013-10-31 14:38:45 - INFO --> To: S (S), S (S),  
+2013-10-31 14:38:45 - INFO --> CC:  
+2013-10-31 14:38:45 - INFO --> BCC:  
+2013-10-31 14:38:45 - INFO --> Subject: Confirmation letter 
+2013-10-31 14:38:45 - INFO --> Body: Dear  this is the confirmation letter of your registration to Sblog 
+2013-10-31 14:49:15 - INFO --> -------------------------- 
+2013-10-31 14:49:15 - INFO --> Controller/Method: practice/sendmail 
+2013-10-31 14:49:15 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY skolbasov@gmail.com 
+2013-10-31 14:49:15 - INFO --> From: SBlog (SBlog@p2.kolbasification.biz) 
+2013-10-31 14:49:15 - INFO --> To: Sergey (skolbasov@yandex.ru),  
+2013-10-31 14:49:15 - INFO --> CC:  
+2013-10-31 14:49:15 - INFO --> BCC:  
+2013-10-31 14:49:15 - INFO --> Subject: Confirmation letter 
+2013-10-31 14:49:15 - INFO --> Body: Dear  this is the confirmation letter of your registration to Sblog 
+2013-10-31 14:51:45 - INFO --> -------------------------- 
+2013-10-31 14:51:45 - INFO --> Controller/Method: practice/sendmail 
+2013-10-31 14:51:45 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY skolbasov@gmail.com 
+2013-10-31 14:51:45 - INFO --> From:  () 
+2013-10-31 14:51:45 - INFO --> To: Sergey (skolbasov@yandex.ru),  
+2013-10-31 14:51:45 - INFO --> CC:  
+2013-10-31 14:51:45 - INFO --> BCC:  
+2013-10-31 14:51:45 - INFO --> Subject: Confirmation letter 
+2013-10-31 14:51:45 - INFO --> Body: Dear  this is the confirmation letter of your registration to Sblog 
+2013-10-31 14:52:36 - INFO --> -------------------------- 
+2013-10-31 14:52:36 - INFO --> Controller/Method: practice/sendmail 
+2013-10-31 14:52:36 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY skolbasov@gmail.com 
+2013-10-31 14:52:36 - INFO --> From:  () 
+2013-10-31 14:52:36 - INFO --> To: Sergey (skolbasov@yandex.ru),  
+2013-10-31 14:52:36 - INFO --> CC:  
+2013-10-31 14:52:36 - INFO --> BCC:  
+2013-10-31 14:52:36 - INFO --> Subject: Confirmation letter 
+2013-10-31 14:52:36 - INFO --> Body: Dear  this is the confirmation letter of your registration to Sblog 
+2013-10-31 16:21:38 - INFO --> -------------------------- 
+2013-10-31 16:21:38 - INFO --> Controller/Method: users/p_signup 
+2013-10-31 16:21:38 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY skolbasov@gmail.com 
+2013-10-31 16:21:38 - INFO --> From: SBlog (SBlog@p2.kolbasification.biz) 
+2013-10-31 16:21:38 - INFO --> To: Sergey (skolbasov@yandex.ru),  
+2013-10-31 16:21:38 - INFO --> CC:  
+2013-10-31 16:21:38 - INFO --> BCC:  
+2013-10-31 16:21:38 - INFO --> Subject: Confirmation letter 
+2013-10-31 16:21:38 - INFO --> Body: Dear  this is the confirmation letter of your registration to Sblog 
+2013-10-31 16:21:42 - INFO --> FAILED TO SEND EMAIL 
+2013-10-31 16:22:47 - INFO --> -------------------------- 
+2013-10-31 16:22:47 - INFO --> Controller/Method: users/p_signup 
+2013-10-31 16:22:47 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY skolbasov@gmail.com 
+2013-10-31 16:22:47 - INFO --> From: SBlog (SBlog@p2.kolbasification.biz) 
+2013-10-31 16:22:47 - INFO --> To: Sergey (skolbasov@yandex.ru),  
+2013-10-31 16:22:47 - INFO --> CC:  
+2013-10-31 16:22:47 - INFO --> BCC:  
+2013-10-31 16:22:47 - INFO --> Subject: Confirmation letter 
+2013-10-31 16:22:47 - INFO --> Body: Dear  this is the confirmation letter of your registration to Sblog 
+2013-10-31 16:27:37 - INFO --> -------------------------- 
+2013-10-31 16:27:37 - INFO --> Controller/Method: users/p_signup 
+2013-10-31 16:27:37 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY skolbasov@gmail.com 
+2013-10-31 16:27:37 - INFO --> From: SBlog (SBlog@p2.kolbasification.biz) 
+2013-10-31 16:27:37 - INFO --> To: Sergey (skolbasov@yandex.ru),  
+2013-10-31 16:27:37 - INFO --> CC:  
+2013-10-31 16:27:37 - INFO --> BCC:  
+2013-10-31 16:27:37 - INFO --> Subject: Confirmation letter 
+2013-10-31 16:27:37 - INFO --> Body: Dear  this is the confirmation letter of your registration to Sblog 
+2013-10-31 16:28:14 - INFO --> -------------------------- 
+2013-10-31 16:28:14 - INFO --> Controller/Method: users/p_signup 
+2013-10-31 16:28:14 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY skolbasov@gmail.com 
+2013-10-31 16:28:14 - INFO --> From: SBlog (SBlog@p2.kolbasification.biz) 
+2013-10-31 16:28:14 - INFO --> To: Sergey (skolbasov@yandex.ru),  
+2013-10-31 16:28:14 - INFO --> CC:  
+2013-10-31 16:28:14 - INFO --> BCC:  
+2013-10-31 16:28:14 - INFO --> Subject: Confirmation letter 
+2013-10-31 16:28:14 - INFO --> Body: Dear  this is the confirmation letter of your registration to Sblog 
+2013-10-31 16:51:37 - INFO --> -------------------------- 
+2013-10-31 16:51:37 - INFO --> Controller/Method: users/p_signup 
+2013-10-31 16:51:37 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY skolbasov@gmail.com 
+2013-10-31 16:51:37 - INFO --> From: SBlog (SBlog@p2.kolbasification.biz) 
+2013-10-31 16:51:37 - INFO --> To: sergey (skolbasov@yandex.ru),  
+2013-10-31 16:51:37 - INFO --> CC:  
+2013-10-31 16:51:37 - INFO --> BCC:  
+2013-10-31 16:51:37 - INFO --> Subject: Confirmation letter 
+2013-10-31 16:51:37 - INFO --> Body: Dear  this is the confirmation letter of your registration to Sblog. To activate your account please visit <a href='http://localhost/users/activate/'a7d9bc9e95722ccbb445941e5142303fb38e931f>Activation Link</a> 
+2013-10-31 16:54:53 - INFO --> -------------------------- 
+2013-10-31 16:54:53 - INFO --> Controller/Method: users/p_signup 
+2013-10-31 16:54:53 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY skolbasov@gmail.com 
+2013-10-31 16:54:53 - INFO --> From: SBlog (SBlog@p2.kolbasification.biz) 
+2013-10-31 16:54:53 - INFO --> To: sdf  (skolbasov@yandex.ru),  
+2013-10-31 16:54:53 - INFO --> CC:  
+2013-10-31 16:54:53 - INFO --> BCC:  
+2013-10-31 16:54:53 - INFO --> Subject: Confirmation letter 
+2013-10-31 16:54:53 - INFO --> Body: Dear sdf  this is the confirmation letter of your registration to Sblog. To activate your account please visit <a href='http://localhost/users/activate/'43cbefeb2815e42c49b93991db55fc701a933742>Activation Link</a> 
+2013-10-31 16:57:41 - INFO --> -------------------------- 
+2013-10-31 16:57:41 - INFO --> Controller/Method: users/p_signup 
+2013-10-31 16:57:41 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY skolbasov@gmail.com 
+2013-10-31 16:57:41 - INFO --> From: SBlog (SBlog@p2.kolbasification.biz) 
+2013-10-31 16:57:41 - INFO --> To: sk  (skolbasov@yandex.ru),  
+2013-10-31 16:57:41 - INFO --> CC:  
+2013-10-31 16:57:41 - INFO --> BCC:  
+2013-10-31 16:57:41 - INFO --> Subject: Confirmation letter 
+2013-10-31 16:57:41 - INFO --> Body: Dear sk  this is the confirmation letter of your registration to Sblog. To activate your account please visit the <a href='http://localhost/users/activate/'bdb5224eb514ecf371a8f57049e34319399b2c9c>activation Link</a> 
+2013-10-31 16:59:23 - INFO --> -------------------------- 
+2013-10-31 16:59:23 - INFO --> Controller/Method: users/p_signup 
+2013-10-31 16:59:23 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY skolbasov@gmail.com 
+2013-10-31 16:59:23 - INFO --> From: SBlog (SBlog@p2.kolbasification.biz) 
+2013-10-31 16:59:23 - INFO --> To: sdf  (skolbasov@yandex.ru),  
+2013-10-31 16:59:23 - INFO --> CC:  
+2013-10-31 16:59:23 - INFO --> BCC:  
+2013-10-31 16:59:23 - INFO --> Subject: Confirmation letter 
+2013-10-31 16:59:23 - INFO --> Body: Dear sdf  this is the confirmation letter of your registration to Sblog. To activate your account please visit the <a href='http://localhost/users/activate/'b7949d4fe3b1785cb131a2ce55924f093c934b2e>activation Link</a> 
+2013-10-31 17:07:23 - INFO --> -------------------------- 
+2013-10-31 17:07:23 - INFO --> Controller/Method: users/p_signup 
+2013-10-31 17:07:23 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY skolbasov@gmail.com 
+2013-10-31 17:07:23 - INFO --> From: SBlog (SBlog@p2.kolbasification.biz) 
+2013-10-31 17:07:23 - INFO --> To: ва  (skolbasov@yandex.ru),  
+2013-10-31 17:07:23 - INFO --> CC:  
+2013-10-31 17:07:23 - INFO --> BCC:  
+2013-10-31 17:07:23 - INFO --> Subject: Confirmation letter 
+2013-10-31 17:07:23 - INFO --> Body: Dear ва  this is the confirmation letter of your registration to Sblog. To activate your account please visit the <a href='http://localhost/users/activate/420b317eef51423cd35899ba3499bec712bc95f4'>activation Link</a> 
+2013-10-31 17:32:26 - INFO --> -------------------------- 
+2013-10-31 17:32:26 - INFO --> Controller/Method: users/p_signup 
+2013-10-31 17:32:26 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY skolbasov@gmail.com 
+2013-10-31 17:32:26 - INFO --> From: SBlog (SBlog@p2.kolbasification.biz) 
+2013-10-31 17:32:26 - INFO --> To: df;sdlkf  (skolbasov@yandex.ru),  
+2013-10-31 17:32:26 - INFO --> CC:  
+2013-10-31 17:32:26 - INFO --> BCC:  
+2013-10-31 17:32:26 - INFO --> Subject: Confirmation letter 
+2013-10-31 17:32:26 - INFO --> Body: Dear df;sdlkf  this is the confirmation letter of your registration to Sblog. To activate your account please visit the <a href='http://localhost/users/p_activate/b2ac0f9b7d9ce9c443b9e415845273f951b123e3'>activation Link</a> 
