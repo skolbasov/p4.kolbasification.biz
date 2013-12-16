@@ -24,7 +24,7 @@ function sort(ev)
 	{
 	for (x=0;x<ev.length-1;x++)
 	{
-		if (ev[x].eventDate>ev[x+1].eventDate)
+		if (ev[x].eventStartTime>ev[x+1].eventStartTime)
 		{
 			var temp=ev[x];
 			ev[x]=ev[x+1];
@@ -32,9 +32,9 @@ function sort(ev)
 		} 
 		else 
 		{
-		if (ev[x].eventDate==ev[x+1].eventDate)
+		if (ev[x].eventStartTime==ev[x+1].eventStartTime)
 		{
-			if (ev[x].eventStartTime>ev[x+1].eventStartTime)
+			if (ev[x+1].eventUrgency=="urgent")&&(ev[x].eventUrgency!="urgent")
 			{
 			var temp=ev[x];
 			ev[x]=ev[x+1];
@@ -78,30 +78,29 @@ $("input:radio").focusout(function()
 });
 
 
-$("#eventDate").focusout(function()
-{
-	var ed=new Date($("#eventDate").val());
-	console.log(ed);
-	if (ed<(new Date())) {$("#errorDiv").html("Only future plans are supported") }else $("#errorDiv").html("");
-});
-
 $("#eventEndTime").focusout(function()
 {
 	console.log($("#eventEndTime").val());
 	if ($("#eventEndTime").val()<$("#eventStartTime").val()) {$("#errorDiv").html("End time should be after start time") }else $("#errorDiv").html("");
 });
 
+$("#eventStartTime").focusout(function(){
+
+	var ed=new Date($("#eventStartTime").val());
+	if (ed<(new Date())) {$("#errorDiv").html("Only future plans are supported") }else $("#errorDiv").html("");
+})
+
 $('#submitButton').click(function()
 {
 
-if (($("#eventName").val()=="")||($("#eventDate").val()=="")||($("#eventStartTime").val()=="")||($("#eventEndTime").val()=="")||($("#eventDescription").val()=="")||($('input:radio[name=urgencySelector]:checked').val()=="")||($('input:radio[name=importanceSelector]:checked').val()=="")||($('input:radio[name=urgencySelector]:checked').val()==undefined)||($('input:radio[name=importanceSelector]:checked').val()==undefined))
+if (($("#eventName").val()=="")||($("#eventStartTime").val()=="")||($("#eventEndTime").val()=="")||($("#eventDescription").val()=="")||($('input:radio[name=urgencySelector]:checked').val()=="")||($('input:radio[name=importanceSelector]:checked').val()=="")||($('input:radio[name=urgencySelector]:checked').val()==undefined)||($('input:radio[name=importanceSelector]:checked').val()==undefined))
 {
 	$("#errorDiv").html("some fields are empty");
 	
 } 
 else
 {
-var event=new Event($("#eventName").val(),$("#eventDate").val(),$("#eventStartTime").val(),$("#eventEndTime").val(),$("#eventDescription").val(),$('input:radio[name=urgencySelector]:checked').val(),$('input:radio[name=importanceSelector]:checked').val());
+var event=new Event($("#eventName").val(),$("#eventStartTime").val(),$("#eventEndTime").val(),$("#eventDescription").val(),$('input:radio[name=urgencySelector]:checked').val(),$('input:radio[name=importanceSelector]:checked').val());
 events.push(event);
 $('#daySchedule').html('');
 sort(events);
@@ -112,7 +111,7 @@ $('#notUrgentimportant').html('');
 $('#notUrgentunimportant').html('');
 for (x in events)
 {
-	$('#daySchedule').append("<div id='event"+x+"' class='line "+events[x].eventUrgency+events[x].eventImportance+"'>Event date: "+events[x].eventDate+"<br> Event time "+events[x].eventStartTime+"-"+events[x].eventEndTime+"<br> Event name: "+events[x].eventName+"<br>"+events[x].eventDescription+"</div>");
+	$('#daySchedule').append("<div id='event"+x+"' class='line "+events[x].eventUrgency+events[x].eventImportance+"'><br> Event time "+events[x].eventStartTime+"-"+events[x].eventEndTime+"<br> Event name: "+events[x].eventName+"<br>"+events[x].eventDescription+"</div>");
 
 	if (events[x].eventUrgency=="urgent") 
 	{
@@ -226,7 +225,6 @@ $('#pushButton').click(function(){
 
 
 gapi.client.load('calendar', 'v3', function() {
-console.log($("#eventDate").val());
 console.log($("#eventStartTime").val());
     var resource = {
   "summary": $("#eventName").val(),
