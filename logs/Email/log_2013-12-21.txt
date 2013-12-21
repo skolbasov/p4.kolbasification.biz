@@ -18,3 +18,103 @@
 		font-weight: normal;
 		font-family: Helvetica, Arial, sans-serif;
 		background-image: url("http://p2.kolbasification.biz 
+2013-12-21 11:10:57 - INFO --> -------------------------- 
+2013-12-21 11:10:57 - INFO --> Controller/Method: users/p_signup 
+2013-12-21 11:10:57 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY skolbasov@gmail.com 
+2013-12-21 11:10:57 - INFO --> From: SBlog (SBlog@p4.kolbasification.biz) 
+2013-12-21 11:10:57 - INFO --> To: Sergey Kolbasov (skolbasov@yandex.ru),  
+2013-12-21 11:10:57 - INFO --> CC:  
+2013-12-21 11:10:57 - INFO --> BCC:  
+2013-12-21 11:10:57 - INFO --> Subject: Confirmation letter 
+2013-12-21 11:10:57 - INFO --> Body: <!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />	
+	<style>
+	body {
+		color: #000000;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: normal;
+		font-family: Helvetica, Arial, sans-serif;
+		background-image: url("http://p2.kolbasification.biz 
+2013-12-21 11:12:30 - INFO --> -------------------------- 
+2013-12-21 11:12:30 - INFO --> Controller/Method: users/p_signup 
+2013-12-21 11:12:30 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY skolbasov@gmail.com 
+2013-12-21 11:12:30 - INFO --> From: SBlog (SBlog@p4.kolbasification.biz) 
+2013-12-21 11:12:30 - INFO --> To: Sergey Kolbasov (skolbasov@yandex.ru),  
+2013-12-21 11:12:30 - INFO --> CC:  
+2013-12-21 11:12:30 - INFO --> BCC:  
+2013-12-21 11:12:30 - INFO --> Subject: Confirmation letter 
+2013-12-21 11:12:30 - INFO --> Body: <!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />	
+	<style>
+	body {
+		color: #000000;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: normal;
+		font-family: Helvetica, Arial, sans-serif;
+		background-image: url("http://p2.kolbasification.biz 
+2013-12-21 11:17:20 - INFO --> -------------------------- 
+2013-12-21 11:17:20 - INFO --> Controller/Method: users/p_signup 
+2013-12-21 11:17:20 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY skolbasov@gmail.com 
+2013-12-21 11:17:20 - INFO --> From: SBlog (SBlog@p4.kolbasification.biz) 
+2013-12-21 11:17:20 - INFO --> To: s k (skolbasov@gmasil.com),  
+2013-12-21 11:17:20 - INFO --> CC:  
+2013-12-21 11:17:20 - INFO --> BCC:  
+2013-12-21 11:17:20 - INFO --> Subject: Confirmation letter 
+2013-12-21 11:17:20 - INFO --> Body: <!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />	
+	<style>
+	body {
+		color: #000000;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: normal;
+		font-family: Helvetica, Arial, sans-serif;
+		background-image: url("http://p2.kolbasification.biz 
+2013-12-21 11:18:54 - INFO --> -------------------------- 
+2013-12-21 11:18:54 - INFO --> Controller/Method: users/p_signup 
+2013-12-21 11:18:54 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY skolbasov@gmail.com 
+2013-12-21 11:18:54 - INFO --> From: SBlog (SBlog@p4.kolbasification.biz) 
+2013-12-21 11:18:54 - INFO --> To: asd dsdf (ssdf@sadas.dk),  
+2013-12-21 11:18:54 - INFO --> CC:  
+2013-12-21 11:18:54 - INFO --> BCC:  
+2013-12-21 11:18:54 - INFO --> Subject: Confirmation letter 
+2013-12-21 11:18:54 - INFO --> Body: <!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />	
+	<style>
+	body {
+		color: #000000;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: normal;
+		font-family: Helvetica, Arial, sans-serif;
+		background-image: url("http://p2.kolbasification.biz 
+2013-12-21 11:24:11 - INFO --> -------------------------- 
+2013-12-21 11:24:11 - INFO --> Controller/Method: users/p_signup 
+2013-12-21 11:24:11 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY skolbasov@gmail.com 
+2013-12-21 11:24:11 - INFO --> From: SBlog (SBlog@p4.kolbasification.biz) 
+2013-12-21 11:24:11 - INFO --> To: aasd asdasd (asd@asda.jd),  
+2013-12-21 11:24:11 - INFO --> CC:  
+2013-12-21 11:24:11 - INFO --> BCC:  
+2013-12-21 11:24:11 - INFO --> Subject: Confirmation letter 
+2013-12-21 11:24:11 - INFO --> Body: <!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />	
+	<style>
+	body {
+		color: #000000;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: normal;
+		font-family: Helvetica, Arial, sans-serif;
+		background-image: url("http://p2.kolbasification.biz 

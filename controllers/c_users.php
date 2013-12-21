@@ -148,6 +148,8 @@ public function p_signup()
 			$_POST['password']=sha1(PASSWORD_SALT.$_POST['password']);
 			$_POST['token']=sha1(TOKEN_SALT.$_POST['email'].Utils::generate_random_string());
 			$_POST['activation_key']=str_shuffle($_POST['password'].$POST['token']);
+            echo $_POST['timezone_name'];
+                echo $_POST['timezone_value'];
 			$activation_link="http://".$_SERVER['SERVER_NAME']."/users/p_activate/".$_POST['activation_key'];
 			$name=$_POST['first_name'];
 			$name.=" ";

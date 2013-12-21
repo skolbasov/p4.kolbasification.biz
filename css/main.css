@@ -116,3 +116,141 @@ text-align:left;
 }
 
 
+/* from p2*/
+  body {
+    color: #000000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    font-family: Helvetica, Arial, sans-serif;
+    background-image: url("../media/texture.png");
+    background-origin: padding-box;
+    background-size: auto;
+    background-attachment: scroll;
+    background-clip: border-box;
+  }
+
+  .error {
+    color:#FF0000;
+  }
+  .nav-item{  
+    color: rgb(215, 215, 215);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: normal;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    outline-color: rgb(215, 215, 215);
+    outline-style: none;
+    outline-width: 0px;
+    padding-bottom: 7px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 9px;
+    text-align: left;
+    height: 3%;
+    text-decoration: none;
+    vertical-align: baseline;
+    width: 10%;
+  }
+  #menu{
+    
+    background-color:#000000;
+    margin-left: 0px;
+    margin-right: 0px;
+    font-family: Helvetica, Arial, sans-serif;
+
+  }
+
+  .InputButton{
+    font-family: Helvetica, Arial, sans-serif;
+    height: 29px;
+    text-decoration: none;
+    vertical-align: baseline;
+    width: 15%;
+    font-size: 16px;
+
+  }
+  .InputField{
+    width: 15%;
+    font-size: 16px;
+
+  }
+  .TextEdit{
+    width: 15%;
+    font-size: 13px;
+  }
+
+@media screen and (max-width: 980px) {
+  body {
+    font-size: 14px;
+    
+  }
+  .InputButton{
+    height: 29px;
+    text-decoration: none;
+    vertical-align: baseline;
+    width: 25%;
+    font-size: 14px;
+
+  }
+  .InputField{
+    width: 25%;
+    font-size: 14px;
+
+  }
+  .TextEdit{
+    width: 25%;
+    font-size: 12px;
+  }
+
+
+  }
+
+@media screen and (max-width: 480px) {
+  body {
+    color: #000000;
+    font-size: 14px;
+    background-origin: padding-box;
+
+  }
+  .InputButton{
+    font-family: Helvetica, Arial, sans-serif;
+    height: 29px;
+    text-decoration: none;
+    vertical-align: baseline;
+    width: 30%;
+    position: relative;
+    left:35%;
+    font-size: 14px;
+
+  }
+  .InputField{
+    position: absolute;
+    left:30%;
+    width:40%;
+    font-size: 14px;
+
+  }
+  .TextEdit{
+    width: 40%;
+    position: relative;
+    left:30%;
+    font-size: 12px;
+    height: 30%;
+  }
+
+  .nav-item{
+    font-size: 15px;
+    text-align: center;
+    height: 5%;
+    width:20%;
+  }
+
+
+  }
+
+
+
