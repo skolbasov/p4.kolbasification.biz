@@ -15,8 +15,8 @@ function makeDiv()
 {
 return "<div class='"+this.eventUrgency+this.eventImportance+"'><br> Event time "+this.eventStartTime+"-"+this.eventEndTime+"<br> Event name: "+this.eventName+"<br>"+this.eventDescription+"</div>";
 }
-
 }
+
 
 function sort(ev)
 {
@@ -55,6 +55,7 @@ $('#urgent').click(function(){
 
 })
 
+
 $('#notUrgent').click(function(){
 	$('.canBeHidden').css('visibility','hidden');
 		$('#hintDiv').html("Not urgent: Tasks to be delegated. Not added-value tasks.");
@@ -67,10 +68,12 @@ $('#important').focusin(function()
 	$('#hintDiv').html("Important: Tasks you must <b>plan</b> or they`ll become urgent.");
 });
 
+
 $('#unimportant').focusin(function()
 {
 	$('#hintDiv').html("Unimportant: Tasks <b>to be eliminated</b> or they`ll become urgent.");
 });
+
 
 $("input:radio").focusout(function()
 {
@@ -84,15 +87,16 @@ $("#eventEndTime").focusout(function()
 	if ($("#eventEndTime").val()<$("#eventStartTime").val()) {$("#errorDiv").html("End time should be after start time") }else $("#errorDiv").html("");
 });
 
+
 $("#eventStartTime").focusout(function(){
 
 	var ed=new Date($("#eventStartTime").val());
 	if (ed<(new Date())) {$("#errorDiv").html("Only future plans are supported") }else $("#errorDiv").html("");
 })
 
+
 $('#submitButton').click(function()
 {
-
 if (($("#eventName").val()=="")||($("#eventStartTime").val()=="")||($("#eventEndTime").val()=="")||($("#eventDescription").val()=="")||($('input:radio[name=urgencySelector]:checked').val()=="")||($('input:radio[name=importanceSelector]:checked').val()=="")||($('input:radio[name=urgencySelector]:checked').val()==undefined)||($('input:radio[name=importanceSelector]:checked').val()==undefined))
 {
 	$("#errorDiv").html("some fields are empty");
@@ -134,6 +138,7 @@ $('#errorDiv').html('');
 }
 });
 
+
 $('#printSchedule').click(function()
 {
 
@@ -152,6 +157,8 @@ $('#printSchedule').click(function()
     new_tab.document.close();
     		
 });
+
+
 $('#printQuadrant').click(function()
 {
 
@@ -222,32 +229,28 @@ var clientId = '704443940021-nssh124np9slcmfpi64o4gicksceaqta.apps.googleusercon
 }*/
 }
 $('#pushButton').click(function(){
-
-
-gapi.client.load('calendar', 'v3', function() {
-console.log($("#eventStartTime").val());
-    var resource = {
-  "summary": $("#eventName").val(),
-  "location": "Somewhere",
-  "start": {
-    "dateTime": $("#eventStartTime").val()+":00.000-07:00"
-  },
-  "end": {
-    "dateTime": $("#eventEndTime").val()+":00.000-07:00"
+    gapi.client.load('calendar', 'v3', function() {
+    console.log($("#eventStartTime").val());
+        var resource = {
+        "summary": $("#eventName").val(),
+        "location": "Somewhere",
+        "start": {
+        "dateTime": $("#eventStartTime").val()+":00.000-07:00"
+                  },
+        "end": {
+        "dateTime": $("#eventEndTime").val()+":00.000-07:00"
   }
 };
-
-
-var request = gapi.client.calendar.events.insert({
-  'calendarId': 'primary',
-  'resource': resource
-});
-request.execute(function(resp) {
-  console.log(resp);
-});
+    var request = gapi.client.calendar.events.insert({
+        'calendarId': 'primary',
+        'resource': resource
+    });
+    request.execute(function(resp) {
+    console.log(resp);
+    });
 })
-  alert("Submit clicked");
-      });
+    alert("Submit clicked");
+    });
 
 
 
@@ -258,7 +261,3 @@ $.getScript( "https://apis.google.com/js/client.js?onload=handleClientLoad" )
   .fail(function( jqxhr, settings, exception ) {
     $( "div.log" ).text( "Triggered ajaxError handler." );
 });
-
-
-
-
