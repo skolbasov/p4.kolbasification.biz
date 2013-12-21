@@ -18,7 +18,7 @@ If you want a different default time format for this app, set it below
 
 # When email is sent out from the server, where should it come from?
 # Ideally, this should match the domain name
-	define('APP_EMAIL', 'SBlog@p2.kolbasification.biz'); 
+	define('APP_EMAIL', 'SBlog@p4.kolbasification.biz'); 
 
 /* 
 A email designated to receive messages from the server. Examples:
@@ -31,7 +31,7 @@ A email designated to receive messages from the server. Examples:
 	define('SYSTEM_EMAIL', 'skolbasov@gmail.com'); 
 
 # Default DB name for this app
-	define('DB_NAME', "kolbasif_p2_kolbasification_biz"); 
+	define('DB_NAME', "kolbasif_p4_kolbasification_biz"); 
 
 # Timezone
 	define('TIMEZONE', 'America/New_York');

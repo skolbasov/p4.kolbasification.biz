@@ -42,7 +42,7 @@ public function p_login() {
         	$q = "SELECT token FROM users WHERE user_id = '".$user_id."'";
 			$token = DB::instance(DB_NAME)->select_field($q);
 			setcookie("token", $token, strtotime('+1 year'), '/');
-			Router::redirect("/posts");
+			Router::redirect("/time/display");
     } 
     else 
     {

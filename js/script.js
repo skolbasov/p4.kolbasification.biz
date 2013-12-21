@@ -34,7 +34,7 @@ function sort(ev)
 		{
 		if (ev[x].eventStartTime==ev[x+1].eventStartTime)
 		{
-			if (ev[x+1].eventUrgency=="urgent")&&(ev[x].eventUrgency!="urgent")
+			if ((ev[x+1].eventUrgency=="urgent")&&(ev[x].eventUrgency!="urgent"))
 			{
 			var temp=ev[x];
 			ev[x]=ev[x+1];

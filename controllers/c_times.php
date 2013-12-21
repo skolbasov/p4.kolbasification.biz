@@ -1,5 +1,5 @@
 <?php
-class posts_controller extends base_controller {
+class times_controller extends base_controller {
 
 public function __construct(){
 
@@ -10,7 +10,21 @@ Router::redirect("/users/login");
 }
 }
 
-public function add(){
+public function index() {
+	
+}
+
+
+public function display(){
+	
+	$this->template->content = View::instance('v_times_display');
+	$this->template->title="New Post";
+	echo $this->template;
+
+}
+}
+
+/*public function add(){
 
 $this->template->content = View::instance('v_posts_add');
 $this->template->title="New Post";
@@ -19,12 +33,12 @@ echo $this->template;
 }
 
 public function p_add(){
-/*$_POST['user_id']=$this->user->user_id;
+$_POST['user_id']=$this->user->user_id;
 $_POST['created']=Time::now();
 $_POST['modified']=Time::now();
 
 DB::instance(DB_NAME)->insert('posts',$_POST);
-Router::redirect("/");*/
+Router::redirect("/");
 
 }
 
@@ -83,7 +97,7 @@ public function unfollow($user_id_followed){
 	
 }
 public function index() {
-	/*
+	
 	$this->template->content=View::instance('v_posts_index');
 	$this->template->title="All Posts";
 	$q='SELECT 
@@ -105,7 +119,5 @@ public function index() {
 	
 	$posts=DB::instance(DB_NAME)->select_rows($q);
 	$this->template->content->posts=$posts;
-	echo $this->template;*/
-}
-
-}
+	echo $this->template;
+}*/
