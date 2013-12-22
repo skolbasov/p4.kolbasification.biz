@@ -44,7 +44,7 @@ public function p_login() {
 			setcookie("token", $token, strtotime('+1 year'), '/');
             $q="UPDATE `users` SET `last_login`=".Time::now()." WHERE user_id = '".$user_id."'";
             DB::instance(DB_NAME)->query($q);
-			Router::redirect("/times/display");
+			Router::redirect("/events/display");
     } 
     else 
     {

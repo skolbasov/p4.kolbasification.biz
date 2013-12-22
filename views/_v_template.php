@@ -9,17 +9,17 @@
 	<script type="text/javascript" src="/js/jstz.js"></script>
 	<!-- Controller Specific JS/CSS -->
 	<?php if(isset($client_files_head)) echo $client_files_head; ?>
-	
+
 	
 </head>
 
 <body>	
+
 <div id='menu'>
 <?php if ($user):?>
-<a href='/posts/' class="nav-item">Feed</a>
-<a href='/' class="nav-item">My Posts</a>
-<a href='/posts/add' class="nav-item">Add a post</a>
-<a href='/posts/users' class="nav-item">Members</a>
+
+<a href='/events/display' class="nav-item">Add an event</a>
+<a href='/events/displaySchedule' class="nav-item">Schedule</a>
 <a href='/users/profile' class="nav-item">Profile</a>
 <a href='/users/logout' class="nav-item">Logout</a>
 <?php else: ?> 
@@ -33,6 +33,6 @@
 <br>
 
 	<?php if(isset($content)) echo $content; ?>
-	
+		<script type="text/javascript" src="/js/timeManagement.js"></script>	
 </body>
 </html>

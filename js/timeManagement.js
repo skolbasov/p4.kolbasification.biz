@@ -1,19 +1,17 @@
-var events =[];
-   
-function Event(eventName,eventStartTime,eventEndTime,eventDescription,eventUrgency,eventImportance)
+function Event(name,startTime,endTime,description,urgency,importance)
 {
-this.eventName=eventName;
-this.eventStartTime=eventStartTime;
-this.eventEndTime=eventEndTime;
-this.eventDescription=eventDescription;
-this.eventUrgency=eventUrgency;
-this.eventImportance=eventImportance;
+this.name=name;
+this.startTime=startTime;
+this.endTime=endTime;
+this.description=description;
+this.urgency=urgency;
+this.importance=importance;
 
 this.makeDiv=makeDiv;
 
 function makeDiv()
 {
-return "<div class='"+this.eventUrgency+this.eventImportance+"'><br> Event time "+this.eventStartTime+"-"+this.eventEndTime+"<br> Event name: "+this.eventName+"<br>"+this.eventDescription+"</div>";
+return "<div class='"+this.urgency+this.importance+"'><br> Event time "+this.startTime+"-"+this.endTime+"<br> Event name: "+this.name+"<br>"+this.description+"</div>";
 }
 }
 
@@ -24,7 +22,7 @@ function sort(ev)
 	{
 	for (x=0;x<ev.length-1;x++)
 	{
-		if (ev[x].eventStartTime>ev[x+1].eventStartTime)
+		if (ev[x].startTime>ev[x+1].startTime)
 		{
 			var temp=ev[x];
 			ev[x]=ev[x+1];
@@ -32,9 +30,9 @@ function sort(ev)
 		} 
 		else 
 		{
-		if (ev[x].eventStartTime==ev[x+1].eventStartTime)
+		if (ev[x].startTime==ev[x+1].startTime)
 		{
-			if ((ev[x+1].eventUrgency=="1")&&(ev[x].eventUrgency!="1"))
+			if ((ev[x+1].urgency=="1")&&(ev[x].urgency!="1"))
 			{
 			var temp=ev[x];
 			ev[x]=ev[x+1];
@@ -46,7 +44,6 @@ function sort(ev)
 	}
 	return ev;
 }
-
 
 
 $('#urgent').click(function(){
@@ -107,7 +104,7 @@ else
 var event=new Event($("#eventName").val(),$("#eventStartTime").val(),$("#eventEndTime").val(),$("#eventDescription").val(),$('input:radio[name=urgencySelector]:checked').val(),$('input:radio[name=importanceSelector]:checked').val());
 $.ajax({
             type: 'POST',
-            url: '/times/p_add',
+            url: '/events/p_add',
              success: function(response) { 
 
               // Enject the results received from process.php into the results div
@@ -121,22 +118,35 @@ $.ajax({
             importance:$('input:radio[name=importanceSelector]:checked').val(),
         },
     });
+}
+})
 
-events.push(event);
-$('#daySchedule').html('');
-sort(events);
 
-$('#urgentimportant').html('');
-$('#urgentunimportant').html('');
-$('#notUrgentimportant').html('');
-$('#notUrgentunimportant').html('');
-for (x in events)
-{
-	$('#daySchedule').append("<div id='event"+x+"' class='line "+events[x].eventUrgency+events[x].eventImportance+"'><br> Event time "+events[x].eventStartTime+"-"+events[x].eventEndTime+"<br> Event name: "+events[x].eventName+"<br>"+events[x].eventDescription+"</div>");
+function fillSchedules(eventsU){
+  
+  var events=[];
+  console.log(eventsU);
 
-	if (events[x].eventUrgency=="1") 
+  for (x in eventsU){
+   var event=new Event(eventsU[x].name,eventsU[x].startTime,eventsU[x].endTime,eventsU[x].description,eventsU[x].urgency,eventsU[x].importance);
+   console.log(event);
+    events.push(event);
+  }
+
+  $('#daySchedule').html('');
+  sort(events);
+
+  $('#urgentimportant').html('');
+  $('#urgentunimportant').html('');
+  $('#notUrgentimportant').html('');
+  $('#notUrgentunimportant').html('');
+  for (x in events)
+    {
+	$('#daySchedule').append("<div id='event"+x+"' class='line ui"+events[x].urgency+events[x].importance+"'><br> Event time "+events[x].startTime+"-"+events[x].endTime+"<br> Event name: "+events[x].name+"<br>"+events[x].description+"</div>");
+
+	if (events[x].urgency=="1") 
 	{
-		if (events[x].eventImportance=="1")
+		if (events[x].importance=="1")
 		{
 		$('#urgentimportant').append(events[x].makeDiv());
 		} 
@@ -144,16 +154,15 @@ for (x in events)
 	} 
 	else 
 	{
-		if (events[x].eventImportance=="1")
+		if (events[x].importance=="1")
 		{
 		$('#notUrgentimportant').append(events[x].makeDiv());
 		}
 		 else $('#notUrgentunimportant').append(events[x].makeDiv());
 	}
+    }
+  $('#errorDiv').html('');	
 }
-$('#errorDiv').html('');	
-}
-});
 
 
 $('#printSchedule').click(function()
@@ -278,3 +287,22 @@ $.getScript( "https://apis.google.com/js/client.js?onload=handleClientLoad" )
   .fail(function( jqxhr, settings, exception ) {
     $( "div.log" ).text( "Triggered ajaxError handler." );
 });
+
+
+$('#getSchedule').click(function(){
+$.ajax({
+            type: 'POST',
+            url: '/events/p_getSchedule',
+             success: function(response) { 
+
+              // Enject the results received from process.php into the results div
+              var eventsU=[];
+              eventsU.push(JSON.parse(response));
+              console.log(eventsU); 
+              fillSchedules(eventsU[0]);
+
+          },
+        data: {},
+    });
+
+})

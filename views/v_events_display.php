@@ -25,19 +25,4 @@
     <div id="errorDiv"></div>
     <div id="hintDiv"></div>
   </div>
-
-<div id="scheduleWrapper" class="column">
-  <div id="daySchedule"></div>
-  <button id="printSchedule" class="btn">Print the schedule</button>
 </div>
-
-<div id='eisenhowerWrapper' class="column">
-  <div id='eisenhowerQuadrant'>
-    <div id='urgentimportant' class="box urgentimportant"></div>
-    <div id='urgentunimportant' class="box urgentunimportant"></div>
-    <div id='notUrgentimportant' class="box notUrgentimportant"></div>
-    <div id='notUrgentunimportant' class="box notUrgentunimportant"></div>
-  </div>
-<button id="printQuadrant" class="btn">Print the quadrant</button>
-</div>
-	<script type="text/javascript" src="/js/timeManagement.js"></script>

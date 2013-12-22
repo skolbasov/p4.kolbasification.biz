@@ -1,5 +1,5 @@
 <?php
-class times_controller extends base_controller {
+class events_controller extends base_controller {
 
 public function __construct(){
 
@@ -17,11 +17,28 @@ public function index() {
 
 public function display(){
 	
-	$this->template->content = View::instance('v_times_display');
-	$this->template->title="New Post";
+	$this->template->content = View::instance('v_events_display');
+	$this->template->title="New event";
 	echo $this->template;
 
 }
+
+public function displaySchedule(){
+	
+	$this->template->content = View::instance('v_events_displaySchedule');
+	$this->template->title="Schedule";
+	echo $this->template;
+
+}
+
+public function p_getSchedule(){
+	$q = "SELECT * FROM events WHERE user_id = '".$this->user->user_id."' AND startTime>'".Time::now()."'";
+	$events = DB::instance(DB_NAME)->select_rows($q);
+	echo json_encode($events);
+
+}
+
+
 
 public function add(){
 
