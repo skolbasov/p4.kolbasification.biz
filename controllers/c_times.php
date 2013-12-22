@@ -33,9 +33,27 @@ echo $this->template;*/
 
 public function p_add(){
 
+	//Check if the user is logged in
+if(!$this->user){
+		echo("You are not logged in");
+	}
+	else{
+
 		$_POST['user_id']=$this->user->user_id;
+
+		//Check if the event already exists
+		$q = "SELECT event_id FROM events WHERE user_id = '".$_POST['user_id']."' AND name='".$_POST['name']."' AND description='".$_POST['description']."'";
+		
+			$event_id = DB::instance(DB_NAME)->select_field($q);
+		if ($event_id!=0){
+		echo("Event already exists");
+
+		}
+		else{
 		$event_id = DB::instance(DB_NAME)->insert('events', $_POST);
 		echo("Event added successfully");
+	}
+	}
 }
 
 

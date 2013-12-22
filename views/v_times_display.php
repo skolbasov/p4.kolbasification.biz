@@ -14,12 +14,12 @@
     <input type="datetime-local" class="text-field canBeHidden" id="eventStartTime" >
         
     <br><label for='eventEndTime' class='canBeHidden'>Enter the event end time</label>
-    <input type="datetime-local" class="text-field canBeHidden"  id="eventEndTime" >
+    <input type="datetime-local" class="text-field canBeHidden" id="eventEndTime" >
           
     <br><label for='eventDescription'>Enter the event description:</label><br>
     <textarea class="text-field" id="eventDescription"></textarea>
+
     <br><button id="submitButton" class="btn">Add to the tasks list</button>
-      <br><button id="ajaxButton" class="btn">AJAX it!</button>
     <br><button id="pushButton" class="btn">Push to my calendar</button>
      <button id="authorize-button" style="visibility: hidden">Authorize</button>
     <div id="errorDiv"></div>

@@ -111,7 +111,7 @@ $.ajax({
              success: function(response) { 
 
               // Enject the results received from process.php into the results div
-              console.log(response);
+              $("#errorDiv").html(response);
         },
         data: { name: $('#eventName').val(),
             startTime:$('#eventStartTime').val(),
