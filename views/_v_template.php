@@ -31,7 +31,7 @@
 </div>
 
 <br>
-	<script type="text/javascript" src="/js/timeManagement.js"></script>
+
 	<?php if(isset($content)) echo $content; ?>
 	
 </body>

@@ -22,6 +22,25 @@ public function display(){
 	echo $this->template;
 
 }
+
+public function add(){
+
+/*$this->template->content = View::instance('v_posts_add');
+$this->template->title="New Post";
+
+echo $this->template;*/
+}
+
+public function p_add(){
+
+		$_POST['user_id']=$this->user->user_id;
+		$event_id = DB::instance(DB_NAME)->insert('events', $_POST);
+		echo("Event added successfully");
+}
+
+
+
+
 }
 
 /*public function add(){

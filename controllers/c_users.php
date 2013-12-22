@@ -171,4 +171,15 @@ public function p_signup()
             }    
     }
 
+public function p_getTimezone(){
+             if ($this->user->user_id!=NULL)
+            {
+            $q = "SELECT timezone_value FROM users WHERE user_id = '".$this->user->user_id."'";
+            $timezone_value = DB::instance(DB_NAME)->select_field($q);
+            echo $timezone_value;
+        } else {echo "user id is null";}
+
+}
+
+
 }

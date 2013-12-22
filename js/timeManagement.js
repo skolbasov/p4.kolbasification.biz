@@ -34,7 +34,7 @@ function sort(ev)
 		{
 		if (ev[x].eventStartTime==ev[x+1].eventStartTime)
 		{
-			if ((ev[x+1].eventUrgency=="urgent")&&(ev[x].eventUrgency!="urgent"))
+			if ((ev[x+1].eventUrgency=="1")&&(ev[x].eventUrgency!="1"))
 			{
 			var temp=ev[x];
 			ev[x]=ev[x+1];
@@ -105,6 +105,23 @@ if (($("#eventName").val()=="")||($("#eventStartTime").val()=="")||($("#eventEnd
 else
 {
 var event=new Event($("#eventName").val(),$("#eventStartTime").val(),$("#eventEndTime").val(),$("#eventDescription").val(),$('input:radio[name=urgencySelector]:checked').val(),$('input:radio[name=importanceSelector]:checked').val());
+$.ajax({
+            type: 'POST',
+            url: '/times/p_add',
+             success: function(response) { 
+
+              // Enject the results received from process.php into the results div
+              console.log(response);
+        },
+        data: { name: $('#eventName').val(),
+            startTime:$('#eventStartTime').val(),
+            endTime:$('#eventEndTime').val(),
+            description:$('#eventDescription').val(),
+            urgency:$('input:radio[name=urgencySelector]:checked').val(),
+            importance:$('input:radio[name=importanceSelector]:checked').val(),
+        },
+    });
+
 events.push(event);
 $('#daySchedule').html('');
 sort(events);
@@ -117,9 +134,9 @@ for (x in events)
 {
 	$('#daySchedule').append("<div id='event"+x+"' class='line "+events[x].eventUrgency+events[x].eventImportance+"'><br> Event time "+events[x].eventStartTime+"-"+events[x].eventEndTime+"<br> Event name: "+events[x].eventName+"<br>"+events[x].eventDescription+"</div>");
 
-	if (events[x].eventUrgency=="urgent") 
+	if (events[x].eventUrgency=="1") 
 	{
-		if (events[x].eventImportance=="important")
+		if (events[x].eventImportance=="1")
 		{
 		$('#urgentimportant').append(events[x].makeDiv());
 		} 
@@ -127,7 +144,7 @@ for (x in events)
 	} 
 	else 
 	{
-		if (events[x].eventImportance=="important")
+		if (events[x].eventImportance=="1")
 		{
 		$('#notUrgentimportant').append(events[x].makeDiv());
 		}
