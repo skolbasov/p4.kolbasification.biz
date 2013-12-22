@@ -54,7 +54,8 @@ $('#urgent').click(function(){
 
 
 $('#notUrgent').click(function(){
-	$('.canBeHidden').css('visibility','hidden');
+	
+  //$('.canBeHidden').css('visibility','hidden');
 		$('#hintDiv').html("Not urgent: Tasks to be delegated. Not added-value tasks.");
 
 })

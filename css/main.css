@@ -111,7 +111,7 @@ text-align:left;
 }
 
 .canBeHidden{
-  visibility:hidden;
+ /* visibility:hidden;*/
 
 }
 
