@@ -32,6 +32,6 @@
 </div>
     <button id="submitButton" class="btn btn-primary">Add to the tasks list</button>
     <button id="pushButton" class="btn">Push to my calendar</button>
-     <button id="authorize-button" style="visibility: hidden">Authorize</button>
+
 <div id="errorDiv"></div>
 <div id="hintDiv"></div>
