@@ -326,20 +326,19 @@ $('#printQuadrant').click(function()
 
 
 
-  $('#googleSync').click(function(){
+  $('#googleSync').click(function()
+{
 
   $.getScript( "https://apis.google.com/js/client.js?onload=handleClientLoad" )
-  .done(function( script, textStatus ) {
-    console.log( "script load status: "+textStatus );
-  })
-  .fail(function( jqxhr, settings, exception ) 
-  {
+      .done(function( script, textStatus )
+      {
+      console.log( "script load status: "+textStatus );
+      })
+      .fail(function( jqxhr, settings, exception ) 
+      {
 
-    $("div.log").text("Triggered ajaxError handler.");
-  });
-
-
-
-  });
+          $("div.log").text("Triggered ajaxError handler.");
+       });
+});
 
 
