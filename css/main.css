@@ -5,7 +5,9 @@ body
   padding-bottom: 40px;
   background-color: #eee;
 }
-
+#authorize-button{
+  visibility:hidden;
+}
 .box
 {
   border:1px solid black;
