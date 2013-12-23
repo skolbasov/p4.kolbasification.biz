@@ -13,5 +13,25 @@
   		</div>
 		<button id="printQuadrant" class="btn btn-primary">Print the quadrant</button>
 </div>
-	<button id="getSchedule" class="btn btn-primary">get the schedule</button>
-	<button id="googleSync" class="btn btn-primary">Sync with google</button>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+
+
+	$.ajax({
+            type: 'POST',
+            url: '/events/p_getSchedule',
+            success: function(response) { 
+
+              // Enject the results received from process.php into the results div
+            var eventsU=[];
+            eventsU.push(JSON.parse(response));
+            console.log(eventsU); 
+            fillSchedules(eventsU[0]);
+
+            },
+            data: {},
+        });
+
+});
+
+</script>

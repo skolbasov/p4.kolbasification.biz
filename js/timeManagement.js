@@ -211,26 +211,6 @@ $('#pushButton').click(function(){
 
   });
 
-
-$('#getSchedule').click(function()
-{
-$.ajax({
-            type: 'POST',
-            url: '/events/p_getSchedule',
-            success: function(response) { 
-
-              // Enject the results received from process.php into the results div
-            var eventsU=[];
-            eventsU.push(JSON.parse(response));
-            console.log(eventsU); 
-            fillSchedules(eventsU[0]);
-
-            },
-            data: {},
-        });
-
-});
-
 $("#googleSync").click(function(){
 
   $.getScript( "https://apis.google.com/js/client.js?onload=handleClientLoad" )
