@@ -32,5 +32,5 @@
 </div>
     <button id="submitButton" class="btn btn-primary">Add to the tasks list</button>
 
-<div id="errorDiv"></div>
-<div id="hintDiv"></div>
+<div id="errorDiv" class="has-error"></div>
+<div id="hintDiv" class="has-warning"></div>
