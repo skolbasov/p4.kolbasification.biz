@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 23, 2013 at 10:36 PM
+-- Generation Time: Dec 24, 2013 at 12:03 AM
 -- Server version: 5.5.33
 -- PHP Version: 5.5.3
 
@@ -29,9 +29,18 @@ CREATE TABLE `events` (
   `urgency` tinyint(1) NOT NULL,
   `importance` tinyint(1) NOT NULL,
   `description` text NOT NULL,
+  `googleEventId` varchar(255) NOT NULL,
   PRIMARY KEY (`event_id`),
   KEY `user_id` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
+
+--
+-- Dumping data for table `events`
+--
+
+INSERT INTO `events` (`event_id`, `name`, `user_id`, `startTime`, `endTime`, `urgency`, `importance`, `description`, `googleEventId`) VALUES
+(6, 'Коньки Лиза', 1, '2013-12-25 19:30:00', '2013-12-25 23:00:00', 0, 1, '', 'heiuipkvo5e58ddov593o0p8p8'),
+(7, 'Выбрать Кино на воскр', 1, '2013-12-24 17:00:00', '2013-12-24 18:00:00', 1, 0, 'выбрать хорошее кино на воскр', 'aff53vqikk9lm4m7qnlcnjl2k8');
 
 -- --------------------------------------------------------
 
@@ -55,7 +64,14 @@ CREATE TABLE `users` (
   `activation_key` varchar(255) NOT NULL,
   PRIMARY KEY (`user_id`),
   UNIQUE KEY `activation_key` (`activation_key`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`user_id`, `created`, `modified`, `token`, `password`, `last_login`, `timezone_name`, `timezone_value`, `first_name`, `last_name`, `email`, `is_activated`, `activation_key`) VALUES
+(1, 1387836425, 1387836425, 'b40820743f7a5b6708cbc55a876ccf74dd67cab7', '769fe036bdc52dbd01abd5e6732756275c3c2f23', 1387836490, 'Europe/Moscow', '+0400', 'Sergey', 'Kolbasov', 'skolbasov@gmail.com', 1, '637f62e65c5d252bca1db9d0fb0d53736c7e2273');
 
 --
 -- Constraints for dumped tables

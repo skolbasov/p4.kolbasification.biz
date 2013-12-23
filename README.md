@@ -20,4 +20,4 @@ Colors matrix:
 
 Restrictions:
 Only future events are supported for sync.
-Only primary calendar is supported.
+Only primary google calendar is supported.
