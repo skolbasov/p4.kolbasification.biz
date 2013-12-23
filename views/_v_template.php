@@ -5,7 +5,10 @@
 
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
 
-	<link rel="stylesheet" href="/css/bootstrap.css" type="text/css">
+	<link rel="stylesheet" href="/css/bootstrap.css" media="screen">
+
+	<link rel="stylesheet" href="/css/main.css">
+	<link rel="stylesheet" href="/css/print.css">
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>	
 	<script type="text/javascript" src="/js/jstz.js"></script>
@@ -19,43 +22,40 @@
 
 <body>	
  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-<div id='menu' class="container">
-<div class="navbar-header">
-           <a class="navbar-brand" href="#">Eisenhower</a>
-</div>
-<div class="navbar-collapse collapse">
-<ul class="nav navbar-nav">
-<?php if ($user):?>
+		<div class="container">
+			<div class="navbar-header">
+        	<a class="navbar-brand" href="#">Eisenhower</a>
+        	<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            	<span class="icon-bar"></span>
+            	<span class="icon-bar"></span>
+           		<span class="icon-bar"></span>
+          	</button>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<?php if ($user):?>
+					<li><a href='/events/display'>Add an event</a></li>
+					<li><a href='/events/displaySchedule'>Schedule</a></li>
+					<li><a href='/users/profile'>Profile</a></li>
+					<?php else: ?> 
+					<li><a href='/'>Home</a>
+					<li><a href='/users/signup'>Sign up</a></li>
+					<?php endif; ?>
+ 				</ul>
+ 				<ul class="nav navbar-nav navbar-right">
+					<?php if ($user):?>
+					<li><a href='/users/logout'>Logout</a></li>
+					<?php else: ?> 
+					<li><a href='/users/login'>Log in</a></li>
+					<?php endif; ?>
+				</ul>
+ 			</div>
+		</div>
+</div>	
 
-<li><a href='/events/display'>Add an event</a></li>
-<li><a href='/events/displaySchedule'>Schedule</a></li>
-<li><a href='/users/profile'>Profile</a></li>
-<?php else: ?> 
-<li><a href='/'>Home</a>
-<li><a href='/users/signup'>Sign up</a></li>
-<?php endif; ?>
-
- </ul>
-
- <ul class="nav navbar-nav navbar-right">
-<?php if ($user):?>
-
-<li><a href='/users/logout'>Logout</a></li>
-<?php else: ?> 
-
-<li><a href='/users/login'>Log in</a></li>
-<?php endif; ?>
-
- </ul>
-
-
-
-
- </div>
-</div>
-</div>
-
+<div class="container">
 	<?php if(isset($content)) echo $content; ?>
+</div>
 		<script type="text/javascript" src="/js/timeManagement.js"></script>	
 </body>
 </html>

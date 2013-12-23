@@ -241,7 +241,7 @@ $("#googleSync").click(function(){
   {
 
     $("div.log").text("Triggered ajaxError handler.");
-  }
+  });
 
     gapi.client.load('calendar', 'v3', function() {
     console.log($("#eventStartTime").val());
