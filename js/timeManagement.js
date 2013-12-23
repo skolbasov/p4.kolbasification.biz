@@ -324,7 +324,9 @@ $('#printQuadrant').click(function()
   });
 }
 
-
+$('#authorize-button').click(function(){
+  handleClientLoad();
+})
 
   $('#googleSync').click(function()
 {
