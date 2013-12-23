@@ -79,22 +79,22 @@ text-align:left;
   border-radius:5px;
   float:left;
 }
-        .urgentimportant{
+        .ui11{
         
           background-color: green;
           }
-.urgentunimportant{
+.ui10{
 
   background-color: blue;
 
 
 }
-       .notUrgentimportant{
+       .ui01{
 
   background-color: orange;
 
 }
-.notUrgentunimportant{
+.ui00{
 
   background-color: red;
 
