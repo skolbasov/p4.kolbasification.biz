@@ -43,14 +43,14 @@ function sort(ev)
 	}	
 	}
 	return ev;
-}
+};
 
 
 $('#urgent').click(function(){
 	$('.canBeHidden').css('visibility','visible');
 		$('#hintDiv').html("Urgent: First importance tasks. You have to <strong>do</strong> them now.");
 
-})
+});
 
 
 $('#notUrgent').click(function(){
@@ -58,7 +58,7 @@ $('#notUrgent').click(function(){
   //$('.canBeHidden').css('visibility','hidden');
 		$('#hintDiv').html("Not urgent: Tasks to be delegated. Not added-value tasks.");
 
-})
+});
 
 
 $('#important').focusin(function()
@@ -90,37 +90,37 @@ $("#eventStartTime").focusout(function(){
 
 	var ed=new Date($("#eventStartTime").val());
 	if (ed<(new Date())) {$("#errorDiv").html("Only future plans are supported") }else $("#errorDiv").html("");
-})
+});
 
 
 $('#submitButton').click(function()
 {
-if (($("#eventName").val()=="")||($("#eventStartTime").val()=="")||($("#eventEndTime").val()=="")||($("#eventDescription").val()=="")||($('input:radio[name=urgencySelector]:checked').val()=="")||($('input:radio[name=importanceSelector]:checked').val()=="")||($('input:radio[name=urgencySelector]:checked').val()==undefined)||($('input:radio[name=importanceSelector]:checked').val()==undefined))
-{
+  if (($("#eventName").val()=="")||($("#eventStartTime").val()=="")||($("#eventEndTime").val()=="")||($("#eventDescription").val()=="")||($('input:radio[name=urgencySelector]:checked').val()=="")||($('input:radio[name=importanceSelector]:checked').val()=="")||($('input:radio[name=urgencySelector]:checked').val()==undefined)||($('input:radio[name=importanceSelector]:checked').val()==undefined))
+  {
 	$("#errorDiv").html("some fields are empty");
 	
-} 
-else
-{
-var event=new Event($("#eventName").val(),$("#eventStartTime").val(),$("#eventEndTime").val(),$("#eventDescription").val(),$('input:radio[name=urgencySelector]:checked').val(),$('input:radio[name=importanceSelector]:checked').val());
-$.ajax({
+  } 
+  else
+  { 
+  var event=new Event($("#eventName").val(),$("#eventStartTime").val(),$("#eventEndTime").val(),$("#eventDescription").val(),$('input:radio[name=urgencySelector]:checked').val(),$('input:radio[name=importanceSelector]:checked').val());
+  $.ajax({
             type: 'POST',
             url: '/events/p_add',
-             success: function(response) { 
+            success: function(response) { 
 
               // Enject the results received from process.php into the results div
               $("#errorDiv").html(response);
-        },
-        data: { name: $('#eventName').val(),
+            },
+            data: { name: $('#eventName').val(),
             startTime:$('#eventStartTime').val(),
             endTime:$('#eventEndTime').val(),
             description:$('#eventDescription').val(),
             urgency:$('input:radio[name=urgencySelector]:checked').val(),
             importance:$('input:radio[name=importanceSelector]:checked').val(),
-        },
-    });
-}
-})
+            },
+          });
+  }
+});
 
 
 function fillSchedules(eventsU){
@@ -163,7 +163,7 @@ function fillSchedules(eventsU){
 	}
     }
   $('#errorDiv').html('');	
-}
+};
 
 
 $('#printSchedule').click(function()
@@ -205,7 +205,72 @@ $('#printQuadrant').click(function()
     		
 });
 
-var clientId = '704443940021-nssh124np9slcmfpi64o4gicksceaqta.apps.googleusercontent.com';
+
+
+$('#pushButton').click(function(){
+
+  });
+
+
+$('#getSchedule').click(function()
+{
+$.ajax({
+            type: 'POST',
+            url: '/events/p_getSchedule',
+            success: function(response) { 
+
+              // Enject the results received from process.php into the results div
+            var eventsU=[];
+            eventsU.push(JSON.parse(response));
+            console.log(eventsU); 
+            fillSchedules(eventsU[0]);
+
+            },
+            data: {},
+        });
+
+});
+
+$("#googleSync").click(function(){
+
+  $.getScript( "https://apis.google.com/js/client.js?onload=handleClientLoad" )
+  .done(function( script, textStatus ) {
+    console.log( "script load status: "+textStatus );
+  })
+  .fail(function( jqxhr, settings, exception ) 
+  {
+
+    $("div.log").text("Triggered ajaxError handler.");
+  }
+
+    gapi.client.load('calendar', 'v3', function() {
+    console.log($("#eventStartTime").val());
+        var resource = {
+        "summary": $("#eventName").val(),
+        "location": "Somewhere",
+        "start": {
+        "dateTime": $("#eventStartTime").val()+":00.000-07:00"
+                  },
+        "end": {
+        "dateTime": $("#eventEndTime").val()+":00.000-07:00"
+      }
+
+                        };
+    var request = gapi.client.calendar.events.insert({
+        'calendarId': 'primary',
+        'resource': resource
+    });
+    request.execute(function(resp) {
+    console.log(resp);
+    });
+    alert("Submit clicked");
+
+
+    });
+  });
+
+
+  var clientId = '704443940021-nssh124np9slcmfpi64o4gicksceaqta.apps.googleusercontent.com';
 
       var apiKey = 'AIzaSyCgyw5Ror4wA8MB4qjqtbRqcJcPbZ5PuEg';
 
@@ -237,8 +302,10 @@ var clientId = '704443940021-nssh124np9slcmfpi64o4gicksceaqta.apps.googleusercon
         return false;
       }
 
+
       // Load the API and make an API call.  Display the results on the screen.
       function makeApiCall() {
+
 
  /* gapi.client.load('calendar', 'v3', function() {
     var request = gapi.client.calendar.events.list({
@@ -255,62 +322,5 @@ var clientId = '704443940021-nssh124np9slcmfpi64o4gicksceaqta.apps.googleusercon
   });
 }*/
 }
-$('#pushButton').click(function(){
-    gapi.client.load('calendar', 'v3', function() {
-    console.log($("#eventStartTime").val());
-        var resource = {
-        "summary": $("#eventName").val(),
-        "location": "Somewhere",
-        "start": {
-        "dateTime": $("#eventStartTime").val()+":00.000-07:00"
-                  },
-        "end": {
-        "dateTime": $("#eventEndTime").val()+":00.000-07:00"
-  }
-};
-    var request = gapi.client.calendar.events.insert({
-        'calendarId': 'primary',
-        'resource': resource
-    });
-    request.execute(function(resp) {
-    console.log(resp);
-    });
-})
-    alert("Submit clicked");
-    });
 
 
-
-$.getScript( "https://apis.google.com/js/client.js?onload=handleClientLoad" )
-  .done(function( script, textStatus ) {
-    console.log( textStatus );
-  })
-  .fail(function( jqxhr, settings, exception ) {
-    $("div.log").text("Triggered ajaxError handler.");
-});
-
-
-$('#getSchedule').click(function(){
-$.ajax({
-            type: 'POST',
-            url: '/events/p_getSchedule',
-             success: function(response) { 
-
-              // Enject the results received from process.php into the results div
-              var eventsU=[];
-              eventsU.push(JSON.parse(response));
-              console.log(eventsU); 
-              fillSchedules(eventsU[0]);
-
-          },
-        data: {},
-    });
-
-})
-
-$("#googleSync").click(function(){
-
-
-
-
-})

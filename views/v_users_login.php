@@ -1,6 +1,7 @@
 
-
-<form method='POST' action='/users/p_login'>
+<div class="container">
+<form method='POST' action='/users/p_login' class="form-signin" role="form">
+ <h2 class="form-signin-heading">Please log in</h2>
 
 <?php if(isset($error)): ?>
 <div class='error'>
@@ -9,16 +10,15 @@
 <br>
 <?php endif; ?>
 
+<div class="form-group">
+     <label for="email">Email address</label>
+    <input type='text' name='email' class="form-control" required autofocus placeholder="mail@domain.ext">
+</div>
 
-    Email<br>
-    <input type='text' name='email' class="InputField">
-
-    <br><br>
-
-    Password<br>
-    <input type='password' name='password' class="InputField">
-    <br><br>
-
-    <input type='submit' value='Log in' class="InputButton">
-
+<div class="form-group">
+     <label for="password">Password</label>
+    <input type='password' name='password' class="form-control" required>
+</div>
+    <input type='submit' value='Log in' class="btn btn-lg btn-primary btn-block">
 </form>
+</div>

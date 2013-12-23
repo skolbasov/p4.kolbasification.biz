@@ -4,9 +4,13 @@
 	<title><?php if(isset($title)) {echo $title;} else {echo "Time management tool";} ?></title>
 
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
-	<link rel="stylesheet" href="/css/main.css" type="text/css">
+
+	<link rel="stylesheet" href="/css/bootstrap.css" type="text/css">
+
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>	
 	<script type="text/javascript" src="/js/jstz.js"></script>
+	<script type="text/javascript" src="/js/bootstrap.js"></script>
+
 	<!-- Controller Specific JS/CSS -->
 	<?php if(isset($client_files_head)) echo $client_files_head; ?>
 
@@ -14,23 +18,42 @@
 </head>
 
 <body>	
-
-<div id='menu'>
+ <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+<div id='menu' class="container">
+<div class="navbar-header">
+           <a class="navbar-brand" href="#">Eisenhower</a>
+</div>
+<div class="navbar-collapse collapse">
+<ul class="nav navbar-nav">
 <?php if ($user):?>
 
-<a href='/events/display' class="nav-item">Add an event</a>
-<a href='/events/displaySchedule' class="nav-item">Schedule</a>
-<a href='/users/profile' class="nav-item">Profile</a>
-<a href='/users/logout' class="nav-item">Logout</a>
+<li><a href='/events/display'>Add an event</a></li>
+<li><a href='/events/displaySchedule'>Schedule</a></li>
+<li><a href='/users/profile'>Profile</a></li>
 <?php else: ?> 
-<a href='/' class="nav-item">Home</a>
-<a href='/users/signup' class="nav-item">Sign up</a>
-<a href='/users/login' class="nav-item">Log in</a>
+<li><a href='/'>Home</a>
+<li><a href='/users/signup'>Sign up</a></li>
 <?php endif; ?>
 
-</div>
+ </ul>
 
-<br>
+ <ul class="nav navbar-nav navbar-right">
+<?php if ($user):?>
+
+<li><a href='/users/logout'>Logout</a></li>
+<?php else: ?> 
+
+<li><a href='/users/login'>Log in</a></li>
+<?php endif; ?>
+
+ </ul>
+
+
+
+
+ </div>
+</div>
+</div>
 
 	<?php if(isset($content)) echo $content; ?>
 		<script type="text/javascript" src="/js/timeManagement.js"></script>	
