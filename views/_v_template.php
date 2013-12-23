@@ -24,7 +24,7 @@
  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
 		<div class="container">
 			<div class="navbar-header">
-        	<a class="navbar-brand" href="#">Eisenhower</a>
+        	<a class="navbar-brand" href="/">Eisenhower</a>
         	<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
             	<span class="icon-bar"></span>
             	<span class="icon-bar"></span>
@@ -38,7 +38,6 @@
 					<li><a href='/events/displaySchedule'>Schedule</a></li>
 					<li><a href='/users/profile'>Profile</a></li>
 					<?php else: ?> 
-					<li><a href='/'>Home</a>
 					<li><a href='/users/signup'>Sign up</a></li>
 					<?php endif; ?>
  				</ul>
