@@ -31,7 +31,6 @@
     <textarea class="form-control text-primary" id="eventDescription" rows="5"></textarea>
 </div>
     <button id="submitButton" class="btn btn-primary">Add to the tasks list</button>
-    <button id="pushButton" class="btn">Push to my calendar</button>
 
 <div id="errorDiv"></div>
 <div id="hintDiv"></div>
