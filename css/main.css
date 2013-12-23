@@ -1,76 +1,58 @@
-body{
+body
+{
   background-image: url("http://p3.kolbasification.biz/media/texture.png");
   padding-top: 40px;
   padding-bottom: 40px;
   background-color: #eee;
-     }
-
-#authorize-button
-{
-  visibility: hidden;
 }
 
-        .box{
-  			border:1px solid black;
-  			margin-top:15px;
-  			margin-left:15px;
-        width:160px;
-        height:160px;
-        float:left;
-        text-align:left;
-        overflow:hidden;
+.box
+{
+  border:1px solid black;
+  margin-top:15px;
+  margin-left:15px;
+  width:160px;
+  height:160px;
+  float:left;
+  text-align:left;
+  overflow:hidden;
+  font-size: 11px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bold;
+  line-height: 1;
+  display: block;
+}
 
-        font-size: 11px;
-        font-style: normal;
-        font-variant: normal;
-        font-weight: bold;
-        line-height: 1;
-        display: block;
+.line{
+  width:100%;
+  text-align:left;
+  font-size: 11px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bold;
+  line-height: 1;
+  display: block;
+  }
 
-        }
-        .line{
-         width:100%;
-        text-align:left;
-        font-size: 11px;
-        font-style: normal;
-        font-variant: normal;
-        font-weight: bold;
-        line-height: 1;
-        display: block;
+#hintDiv
+{
+  color:black;
+}
 
-        }
+#errorDiv
+{
+  color:red;
+}
 
-        #hintDiv{
-          color:black;
-        }
-        #errorDiv{
-          color:red;
-        }
-        /*.column{
-          float:left;
-          overflow:hidden;
-          text-align: center;
-          width:30%;
-          margin-left:10px;
-          margin-right:10px;
-          display: inline;
-                                           font: bold 11px/1 "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
-        font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Verdana, sans-serif;
-        font-size: 13px;
-        }
-
-        #inputForm{
-text-align:left;
-}*/
-        #daySchedule{
-         /* overflow:auto;*/
-                    width:99%;
-                    height:80%;   
-                    
-          border:1px solid black;
-          background-color: white;
+#daySchedule
+{
+  width:99%;
+  height:80%;   
+  border:1px solid black;
+  background-color: white;
           
-        }
+}
 
 #EisenhowerQuadrant{
 	width:370px;
@@ -80,103 +62,30 @@ text-align:left;
   border-radius:5px;
   float:left;
 }
-        .ui11{
-        
-          background-color: green;
-          }
-.ui10{
 
+.ui11
+{
+background-color: green;
+}
+
+.ui10
+{
   background-color: blue;
-
-
 }
-       .ui01{
 
+.ui01
+{
   background-color: orange;
-
 }
-.ui00{
 
+.ui00
+{
   background-color: red;
-
-
 }
 
-.canBeHidden{
- /* visibility:hidden;*/
-
-}
-
-
-
-/* from p2*/
- /* body {
-    color: #000000;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: normal;
-    font-family: Helvetica, Arial, sans-serif;
-    background-image: url("../media/texture.png");
-    background-origin: padding-box;
-    background-size: auto;
-    background-attachment: scroll;
-    background-clip: border-box;
-  }*/
-
-  .error {
+.error
+  {
     color:#FF0000;
   }
- /* .nav-item{  
-    color: rgb(215, 215, 215);
-    font-size: 20px;
-    font-style: normal;
-    font-weight: normal;
-    margin-bottom: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 10px;
-    outline-color: rgb(215, 215, 215);
-    outline-style: none;
-    outline-width: 0px;
-    padding-bottom: 7px;
-    padding-left: 0px;
-    padding-right: 0px;
-    padding-top: 9px;
-    text-align: left;
-    height: 3%;
-    text-decoration: none;
-    vertical-align: baseline;
-    width: 10%;
-  }
-  #menu{
-    
-    background-color:#000000;
-    margin-left: 0px;
-    margin-right: 0px;
-    font-family: Helvetica, Arial, sans-serif;
-
-  }*/
-/*
-  .InputButton{
-    font-family: Helvetica, Arial, sans-serif;
-    height: 29px;
-    text-decoration: none;
-    vertical-align: baseline;
-    width: 15%;
-    font-size: 16px;
-
-  }
-
-  .InputField{
-    width: 15%;
-    font-size: 16px;
-
-  }
-  .TextEdit{
-    width: 15%;
-    font-size: 13px;
-  }*/
-
-
 
 

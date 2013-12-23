@@ -1,6 +1,6 @@
 <div class="form-group">
     <label for='eventName' class="control-label">Enter the event name</label>
-    <input type="text" class="form-control"  id="eventName" maxlength="240" >
+    <input type="text" class="form-control"  id="eventName" maxlength="240" required>
 </div>
 <div id="urgencyImportanceSelector" class="form-group">Choose the event parameters:
     <br>
