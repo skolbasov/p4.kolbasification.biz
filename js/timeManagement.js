@@ -286,7 +286,7 @@ $.getScript( "https://apis.google.com/js/client.js?onload=handleClientLoad" )
     console.log( textStatus );
   })
   .fail(function( jqxhr, settings, exception ) {
-    $( "div.log" ).text( "Triggered ajaxError handler." );
+    $("div.log").text("Triggered ajaxError handler.");
 });
 
 
@@ -305,5 +305,12 @@ $.ajax({
           },
         data: {},
     });
+
+})
+
+$("#googleSync").click(function(){
+
+
+
 
 })

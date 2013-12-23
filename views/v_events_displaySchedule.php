@@ -3,6 +3,7 @@
 <div id="scheduleWrapper" class="column">
   <div id="daySchedule"></div>
   <button id="printSchedule" class="btn">Print the schedule</button>
+  <button id="googleSync" class="btn">Sync with google</button>
 </div>
 
 <div id='eisenhowerWrapper' class="column">
