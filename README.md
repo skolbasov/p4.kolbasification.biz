@@ -2,10 +2,22 @@ My final project is a future development of the time-management tool, which I cr
 
 Features:
 	additional print pages;
-	google calendar sync;
+	pull google calendar events;
 	User authentication;
 	Account confirmation email`s;
 
 JavaScript is used for frontend logic (event listeners, input verification, schedule creation and so on). Moreover JS Google API is used.
 
-Please use your own testing google account to try the sync features.
+Please use your own testing google account to try the pull the events, or add events manually via "add an event" menu point.
+You can specify different events in your google calendar, add the colors to them(red, green, blue and orange are supported).
+
+Colors matrix:
+ red - not urgent, unimportant event;
+ green- urgent and important event;
+ blue - urgent, unimportant event;
+ orange - not urgent, but important event.
+
+
+Restrictions:
+Only future events are supported for sync.
+Only primary calendar is supported.
