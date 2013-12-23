@@ -5,6 +5,11 @@ body{
   background-color: #eee;
      }
 
+#authorize-button
+{
+  visibility: hidden;
+}
+
         .box{
   			border:1px solid black;
   			margin-top:15px;
