@@ -243,7 +243,7 @@ $('#printQuadrant').click(function()
       // Load the API and make an API call.  Display the results on the screen.
       function makeApiCall() {
 
-        gapi.client.load('calendar', 'v3', function() {
+       /* gapi.client.load('calendar', 'v3', function() {
               console.log($("#eventStartTime").val());
               var resource = {
               "summary": $("#eventName").val(),
@@ -264,24 +264,69 @@ $('#printQuadrant').click(function()
           console.log(resp);
           });
       
-    });
+    });*/
 
 
- /* gapi.client.load('calendar', 'v3', function() {
+  gapi.client.load('calendar', 'v3', function() {
     var request = gapi.client.calendar.events.list({
-      'calendarId': 'primary'
+      'calendarId': 'primary',
+      'timeMin': new Date(),
+      "orderBy": "updated"
     });
           
     request.execute(function(resp) {
+      
       for (var i = 0; i < resp.items.length; i++) {
-        var li = document.createElement('li');
+       /* var li = document.createElement('li');
         li.appendChild(document.createTextNode(resp.items[i].summary));
-        document.getElementById('events').appendChild(li);
+        document.getElementById('events').appendChild(li);*/
+        console.log(resp.items[i]);
+        var color=parseInt(resp.items[i].colorId);
+        console.log(color);
+        var importance=0;
+        var urgency=0;
+        if (color==11) {
+              urgency=0;
+              importance=0;
+            }else if (color==10){
+              urgency=1;
+              importance=1;
+              } else if(color==9){
+              urgency=1;
+              importance=0;
+              } else if (color==5){
+            
+              urgency=0;
+              importance=1;
+              
+            }
+
+         $.ajax({
+            type: 'POST',
+            url: '/events/p_add',
+            success: function(response) { 
+
+              // Enject the results received from process.php into the results div
+              $("#syncStat").html(response);
+            },
+            data: { name: resp.items[i].summary,
+            startTime:resp.items[i].start.dateTime,
+            endTime:resp.items[i].end.dateTime,
+            description:resp.items[i].description,
+            urgency:urgency,
+            importance:importance,
+            googleEventId:resp.items[i].id,
+            },
+          });
+
       }
     });
   });
-}*/
 }
+
+
+
+  $('#googleSync').click(function(){
 
   $.getScript( "https://apis.google.com/js/client.js?onload=handleClientLoad" )
   .done(function( script, textStatus ) {
@@ -291,6 +336,10 @@ $('#printQuadrant').click(function()
   {
 
     $("div.log").text("Triggered ajaxError handler.");
+  });
+
+
+
   });
 
 
