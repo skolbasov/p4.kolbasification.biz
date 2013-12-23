@@ -207,47 +207,7 @@ $('#printQuadrant').click(function()
 
 
 
-$('#pushButton').click(function(){
 
-  });
-
-$("#googleSync").click(function(){
-
-  $.getScript( "https://apis.google.com/js/client.js?onload=handleClientLoad" )
-  .done(function( script, textStatus ) {
-    console.log( "script load status: "+textStatus );
-  })
-  .fail(function( jqxhr, settings, exception ) 
-  {
-
-    $("div.log").text("Triggered ajaxError handler.");
-  });
-
-    gapi.client.load('calendar', 'v3', function() {
-    console.log($("#eventStartTime").val());
-        var resource = {
-        "summary": $("#eventName").val(),
-        "location": "Somewhere",
-        "start": {
-        "dateTime": $("#eventStartTime").val()+":00.000-07:00"
-                  },
-        "end": {
-        "dateTime": $("#eventEndTime").val()+":00.000-07:00"
-      }
-
-                        };
-    var request = gapi.client.calendar.events.insert({
-        'calendarId': 'primary',
-        'resource': resource
-    });
-    request.execute(function(resp) {
-    console.log(resp);
-    });
-    alert("Submit clicked");
-
-
-    });
-  });
 
 
   var clientId = '704443940021-nssh124np9slcmfpi64o4gicksceaqta.apps.googleusercontent.com';
@@ -267,13 +227,15 @@ $("#googleSync").click(function(){
 
 
       function handleAuthResult(authResult) {
-        var authorizeButton = document.getElementById('authorize-button');
+
         if (authResult && !authResult.error) {
-          authorizeButton.style.visibility = 'hidden';
+          $("#authorize-button").css('visibility','hidden');
           makeApiCall();
         } else {
-          authorizeButton.style.visibility = '';
-          authorizeButton.onclick = handleAuthClick;
+            $("#authorize-button").css('visibility','');
+            $("#authorize-button").click(function(){
+               handleAuthClick;
+         });
         }
       }
 
@@ -285,6 +247,29 @@ $("#googleSync").click(function(){
 
       // Load the API and make an API call.  Display the results on the screen.
       function makeApiCall() {
+
+        gapi.client.load('calendar', 'v3', function() {
+              console.log($("#eventStartTime").val());
+              var resource = {
+              "summary": $("#eventName").val(),
+              "location": "Somewhere",
+              "start": {
+              "dateTime": $("#eventStartTime").val()+":00.000-07:00"
+                  },
+              "end": {
+              "dateTime": $("#eventEndTime").val()+":00.000-07:00"
+                     }
+
+                            };
+        var request = gapi.client.calendar.events.insert({
+          'calendarId': 'primary',
+          'resource': resource
+          });
+        request.execute(function(resp) {
+          console.log(resp);
+          });
+      
+    });
 
 
  /* gapi.client.load('calendar', 'v3', function() {
@@ -302,5 +287,15 @@ $("#googleSync").click(function(){
   });
 }*/
 }
+
+  $.getScript( "https://apis.google.com/js/client.js?onload=handleClientLoad" )
+  .done(function( script, textStatus ) {
+    console.log( "script load status: "+textStatus );
+  })
+  .fail(function( jqxhr, settings, exception ) 
+  {
+
+    $("div.log").text("Triggered ajaxError handler.");
+  });
 
 
