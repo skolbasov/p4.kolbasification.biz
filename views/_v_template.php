@@ -5,7 +5,7 @@
 
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
 
-	<link rel="stylesheet" href="/css/bootstrap.css" media="screen">
+	<link rel="stylesheet" href="/css/bootstrap.css">
 
 	<link rel="stylesheet" href="/css/main.css">
 	<link rel="stylesheet" href="/css/print.css">

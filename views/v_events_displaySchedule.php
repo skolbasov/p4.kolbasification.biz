@@ -15,8 +15,6 @@
 </div>
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-
-
 	$.ajax({
             type: 'POST',
             url: '/events/p_getSchedule',
@@ -31,7 +29,6 @@ document.addEventListener("DOMContentLoaded", function() {
             },
             data: {},
         });
-
 });
 
 </script>
