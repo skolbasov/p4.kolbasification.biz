@@ -4,4 +4,4 @@
 First name: <?=htmlentities($user->first_name, ENT_QUOTES, 'UTF-8')?><br>
 Last name: <?=htmlentities($user->last_name, ENT_QUOTES, 'UTF-8')?><br>
 
-<button id="googleSync" class="btn btn-primary">Sync with google</button>
+<button id="googleSync" class="btn btn-primary">Sync events with google calendar</button>
