@@ -205,11 +205,6 @@ $('#printQuadrant').click(function()
     		
 });
 
-
-
-
-
-
   var clientId = '704443940021-nssh124np9slcmfpi64o4gicksceaqta.apps.googleusercontent.com';
 
       var apiKey = 'AIzaSyCgyw5Ror4wA8MB4qjqtbRqcJcPbZ5PuEg';
