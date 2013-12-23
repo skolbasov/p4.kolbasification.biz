@@ -16,5 +16,5 @@
   	   	<label for="password" class="control-label">Password</label>
     	<input type='password' name='password' class="form-control" required>
 	</div>
-    <input type='submit' value='Log in' class="btn btn-lg btn-primary btn-block">
+    <input type='submit' value='Log in' class="btn btn-primary btn-block">
 </form>
