@@ -221,17 +221,18 @@ $('#printQuadrant').click(function()
       }
 
 
-      function handleAuthResult(authResult) {
+      function handleAuthResult(authResult)
+       {
 
+        var authorizeButton = document.getElementById('authorize-button');
         if (authResult && !authResult.error) {
-          $("#authorize-button").css('visibility','hidden');
-          makeApiCall();
-        } else {
-            $("#authorize-button").css('visibility','');
-            $("#authorize-button").click(function(){
-               handleAuthClick;
-         });
-        }
+        authorizeButton.style.visibility = 'hidden';
+        makeApiCall();
+         } else 
+          {
+          authorizeButton.style.visibility = '';
+          authorizeButton.onclick = handleAuthClick;
+          }
       }
 
       function handleAuthClick(event) {
@@ -325,13 +326,16 @@ $('#printQuadrant').click(function()
 }
 
 $('#authorize-button').click(function(){
-  handleClientLoad();
+
 })
 
   $('#googleSync').click(function()
 {
 
-  $.getScript( "https://apis.google.com/js/client.js?onload=handleClientLoad" )
+
+      makeApiCall();
+});
+    $.getScript( "https://apis.google.com/js/client.js?onload=handleClientLoad" )
       .done(function( script, textStatus )
       {
       console.log( "script load status: "+textStatus );
@@ -341,6 +345,5 @@ $('#authorize-button').click(function(){
 
           $("div.log").text("Triggered ajaxError handler.");
        });
-});
 
 
